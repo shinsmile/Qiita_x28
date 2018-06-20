@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: Qiita_x28_production
-  username: Qiita_x28
-  password: <%= ENV['QIITA_X28_DATABASE_PASSWORD'] %>
+  database: ~~~（それぞれのアプリケーション名によって異なっています。こちらは編集しないでください）
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
