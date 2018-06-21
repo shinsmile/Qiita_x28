@@ -1,4 +1,4 @@
-class CreateUserTags < ActiveRecord::Migration[5.2]
+class CreateUserTags < ActiveRecord::Migration[4.2][5.2]
   def change
     create_table :user_tags do |t|
       t.references :tag, null: false, foreign_key: true

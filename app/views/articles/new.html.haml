@@ -1,0 +1,9 @@
+.article-new
+  = form_for @article do |f|
+    = f.hidden_field :user_id, value: current_user.id
+    .article-new-title
+      = f.text_field :title, required: true, autofocus: true, placeholder: "Input Title"
+    .article-new-body
+      = f.text_field :body, required: true, placeholder: "Input Title"
+    .save-btn
+      = f.submit "PUBLISH"
