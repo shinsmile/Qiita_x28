@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
       :user_id,
       :title,
       :body
-    )
+    ).merge(tag_list: params[:article][:tag])
   end
 
 
