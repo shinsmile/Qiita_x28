@@ -3,8 +3,8 @@
     = f.hidden_field :user_id, value: current_user.id
     .article-new-title
       = f.text_field :title, required: true, autofocus: true, placeholder: "タイトル"
-    / .article-new-tags
-    /   = f.text_field :tag, required: true, autofocus: true, placeholder: "プログラミング技術に関連するタグをカンマ区切りで5つまで入力（例: Ruby Rails:4.2.0）"
+    .article-new-tag
+      = text_field_tag "article[tag][]", "", placeholder: "プログラミング技術に関連するタグをカンマ区切りで5つまで入力（例: Ruby Rails:4.2.0）"
 
     .article-new-body
       .article-new-body_text
