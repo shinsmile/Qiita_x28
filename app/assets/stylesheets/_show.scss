@@ -1,0 +1,57 @@
+#main {
+  .wapper {
+    background-color: #f1f1f1;
+    width: 100vw;
+    height: 100vh;
+    #container {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      padding-top: 24px;
+      padding-bottom: 40px;
+      grid-template-rows: minmax(270px,auto) 1fr;
+      grid-template-columns: 80px calc(100% - 300px - 80px) 300px;
+      display: flex;
+      max-width: 1280px;
+      width: calc(100% - 50px);
+      margin-right: auto;
+      margin-left: auto;
+      .stick_Menu {
+        margin-top: 40px;
+        position: sticky;
+        top: 20vh;
+        .list {
+          .icon {
+          }
+        }
+      }
+      .main_header {
+        background-color: red;
+        .header_info {
+          &_author {
+          }
+          &_time {
+          }
+          &_meta {
+            &_manipulate {
+            }
+          }
+        }
+        .title {
+        }
+        .Tags {
+          &_name {
+          }
+        }
+
+      }
+    }
+  }
+}
+
+    // position: sticky;
+    // https://q-az.net/position-sticky/
+    // top: 20vh;
+    // will-change: transform;
+    // 説明URL https://developer.mozilla.org/ja/docs/Web/CSS/will-change
+    // margin-top: 40px;

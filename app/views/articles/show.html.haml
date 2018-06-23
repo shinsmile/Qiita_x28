@@ -1,6 +1,47 @@
+%link{:href => "https://use.fontawesome.com/releases/v5.0.6/css/all.css", :rel => "stylesheet"}/
 
-%h1.title
-  =@article.title
-%p
-  =qiita_markdown(@article.body)
+#main
+  .wapper
+    #container{style: "display: grid;"}
+      #item.stick_Menu
+        %li.list
+          = link_to root_path do
+            = fa_icon "thumbs-up"
+        %li.list
+          = link_to root_path do
+            = fa_icon "cog"
+
+      #item.main_header
+        .header_info
+          .header_author
+            投稿者の名前
+            / %a
+            / = img_tag "", size: "", alt: "アイコン"
+          .header_time
+            投稿時間
+          .header_meta
+            .header_manipulate
+        %h1.title
+          / ダミー
+          / = @article.title
+        #Tags
+          %a.Tags_name
+            / tagリンク先の記述
+            %span
+              タグネーム
+      #item.option_
+      / %data.react
+      /   .good-icon
+      /     %label.like
+      /       いいねアイコン
+      /   .-icon
+      /     %label.stock
+      /       ディレクトリ
+      / .main_footer
+      /   .footer_info
+      /     .footer_author
+      /     .footer_
+      / .author_Info
+      /   %a
+      /   .author_info_body
 
