@@ -4,19 +4,22 @@
   .wapper
     #container{style: "display: grid;"}
       #item.stick_Menu
-        %li.list
-          = link_to root_path do
-            = fa_icon "thumbs-up"
-        %li.list
-          = link_to root_path do
-            = fa_icon "cog"
-
+        %span.fa-stack.fa-2x
+          %i.fas.fa-circle.fa-stack-2x
+          %i.fas.fa-thumbs-up.fa-stack-1x.fa-inverse
+        %span.fa-stack.fa-2x
+          %i.fas.fa-circle.fa-stack-2x
+          %i.fas.fa-folder.fa-stack-1x.fa-inverse
+        %span.fa-stack.fa-2x
+          %i.fas.fa-circle.fa-stack-2x
+          %i.fab.fa-twitter.fa-stack-1x.fa-inverse
+        %span.fa-stack.fa-2x
+          %i.fas.fa-circle.fa-stack-2x
+          %i.fab.fa-facebook.fa-stack-1x.fa-inverse
       #item.main_header
         .header_info
           .header_author
             投稿者の名前
-            / %a
-            / = img_tag "", size: "", alt: "アイコン"
           .header_time
             投稿時間
           .header_meta
@@ -44,4 +47,17 @@
       / .author_Info
       /   %a
       /   .author_info_body
+/ iconの順番
+/           %li.list
+/             = link_to root_path do
+/               = fa_icon "thumbs-up"
+/           %li.list
+/             = link_to root_path do
+/               = fa_icon "folder"
+/           %li.list
+/             = link_to root_path do
+/               = fa_icon "twitter"
+/           %li.list
+/             = link_to root_path do
+/               = fa_icon "facebook-square"
 
