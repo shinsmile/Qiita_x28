@@ -9,8 +9,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    if Article.create(article_params)
-      redirect_to :root
+    if @article = Article.create(article_params)
+      redirect_to action: :show, id: @article.id
     else
       redirect_to action: :new
     end
