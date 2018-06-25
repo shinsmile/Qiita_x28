@@ -42,6 +42,7 @@ gem "acts_as_follower"
 gem 'github-linguist'
 gem 'qiita-markdown'
 gem 'acts-as-taggable-on'
+gem 'erb2haml'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
