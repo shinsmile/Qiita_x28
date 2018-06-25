@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  layout "main"
 
   def index
   end
