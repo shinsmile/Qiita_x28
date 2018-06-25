@@ -19,6 +19,19 @@
       margin-top: 30px;
       margin-bottom: 30px;
     }
+    .title-register {
+      font-size: 36px;
+      font-weight: 400px;
+      color: #4a4a4a;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .welcome-message {
+      font-size: 21px;
+      font-weight: 300px;
+      color: #4a4a4a;
+      margin-bottom: 20px;
+    }
     .line {
       height: 0;
       border: 0;
@@ -50,6 +63,11 @@
           text-decoration: none;
         }
       }
+      .sns-message {
+        color: #999;
+        text-decoration: none;
+        font-size: 14px;
+      }
     }
   }
   .right-content {
@@ -57,6 +75,14 @@
     width: 312px;
     padding: 0 10px;
     border-left: 1px solid #eee;
+    #user_name {
+        height: 22px;
+        width: 287px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        padding: 6px 12px;
+    }
     #user_email {
         height: 22px;
         width: 287px;
@@ -80,6 +106,16 @@
       color: #337ab7;
       text-decoration: none;
       font-size: 14px;
+    }
+    .register-message {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #999;
+      .terms {
+        font-size: 14px;
+        color: #337ab7;
+        text-decoration: none;
+      }
     }
     .actions {
       margin-top: 20px;
