@@ -1,52 +1,47 @@
 %link{:href => "https://use.fontawesome.com/releases/v5.0.6/css/all.css", :rel => "stylesheet"}/
-
 #main
   .wapper
     #container{style: "display: grid;"}
       #item.stick_Menu
+        %span.fa-stack.fa-1x
+          %i.fas.fa-thumbs-up
         %span.fa-stack.fa-2x
-          %i.fas.fa-circle.fa-stack-2x
-          %i.fas.fa-thumbs-up.fa-stack-1x.fa-inverse
-        %span.fa-stack.fa-2x
-          %i.fas.fa-circle.fa-stack-2x
-          %i.fas.fa-folder.fa-stack-1x.fa-inverse
-        %span.fa-stack.fa-2x
-          %i.fas.fa-circle.fa-stack-2x
-          %i.fab.fa-twitter.fa-stack-1x.fa-inverse
-        %span.fa-stack.fa-2x
-          %i.fas.fa-circle.fa-stack-2x
-          %i.fab.fa-facebook.fa-stack-1x.fa-inverse
-      #item.main_header
-        .header_info
-          .header_author
-            投稿者の名前
-          .header_time
-            投稿時間
-          .header_meta
-            .header_manipulate
-        %h1.title
-          / ダミー
-          / = @article.title
-        #Tags
-          %a.Tags_name
-            / tagリンク先の記述
-            %span
-              タグネーム
-      #item.option_
-      / %data.react
-      /   .good-icon
-      /     %label.like
-      /       いいねアイコン
-      /   .-icon
-      /     %label.stock
-      /       ディレクトリ
-      / .main_footer
-      /   .footer_info
-      /     .footer_author
-      /     .footer_
-      / .author_Info
-      /   %a
-      /   .author_info_body
+          %i.fas.fa-folder
+        %span.fa-stack.fa-3x
+          %i.fab.fa-twitter
+        %span.fa-stack.fa-4x
+          %i.fab.fa-facebook-f
+      #item.main
+        .show_article
+          .show_header
+            .show_header_info
+              .show_header_info__author
+                %a
+                  作者情報
+              .show_header_info__time
+                2015年07月31日に更新
+              .show_header_info__meta
+                %i.fab.fa-ellipsis-h.fa
+            %h1.title
+              タイトル
+            #Tags.header_tags
+              %a.tags_name
+                tagリンク先の記述
+                %span.tags_links
+                  タグネーム
+          .content
+            記事内容
+          .show_footer
+            .show_footer_menu
+              編集リクエスト・ストック済み・いいねicon
+            .show_footer_social
+              social-icon
+          .show_footer_author_info
+            作者情報
+      #item.option
+  #container{style: "display: grid;"}
+    show_footer部分
+
 / iconの順番
 /           %li.list
 /             = link_to root_path do
@@ -60,4 +55,18 @@
 /           %li.list
 /             = link_to root_path do
 /               = fa_icon "facebook-square"
+/ %data.react
+/   .good-icon
+/     %label.like
+/       いいねアイコン
+/   .-icon
+/     %label.stock
+/       ディレクトリ
+/ .main_footer
+/   .footer_info
+/     .footer_author
+/     .footer_
+/ .author_Info
+/   %a
+/   .author_info_body
 

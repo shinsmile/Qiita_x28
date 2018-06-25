@@ -1,37 +1,150 @@
 #main {
   .wapper {
     background-color: #f1f1f1;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     #container {
-      width: 100%;
-      height: 100%;
-      margin: auto;
+      grid-template-columns: 80px calc(100% - 300px - 80px) 300px;
+      grid-template-rows: minmax(270px,auto) 1fr;
       padding-top: 24px;
       padding-bottom: 40px;
-      grid-template-rows: minmax(270px,auto) 1fr;
-      grid-template-columns: 80px calc(100% - 300px - 80px) 300px;
+      height: 1000px;
+      width: calc(100% - 50px);
       display: flex;
       max-width: 1280px;
-      width: calc(100% - 50px);
+      margin: auto;
       margin-right: auto;
       margin-left: auto;
       .stick_Menu {
-        margin-top: 40px;
         position: sticky;
+        margin-top: 40px;
         top: 20vh;
+        .fa-1x {
+          border: 2px solid #55c500;
+          background-color: #fff;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50px;
+          height: 50px;
+          font-size: 24px;
+          position: relative;
+          margin-bottom: 16px;
+          .fa-thumbs-up {
+            cursor: pointer;
+            color: #55c500;
+          }
         }
-      .main_header {
-        background-color: red;
-        .header_info {
-          &_author {
+        .fa-2x {
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50px;
+          height: 50px;
+          margin-right: 24px;
+          margin-bottom: 24px;
+          transition: color .1s;
+          background-color: gray;
+          position: relative;
+          .fa-folder {
+            cursor: pointer;
+            color: white;
+            font-size: 0.8em;
           }
-          &_time {
+        }
+        .fa-3x {
+          margin-right: 32px;
+          margin-left: 8px;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          background-color: #aaa;
+          font-size: 18px;
+          cursor: pointer;
+          margin-bottom: 16px;
+          .fa-twitter {
+            cursor: pointer;
+            color: white;
+            font-size: 1em
           }
-          &_meta {
+        }
+        .fa-4x {
+          margin-right: 32px;
+          margin-left: 8px;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          background-color: #aaa;
+          font-size: 18px;
+          cursor: pointer;
+          .fa-facebook-f {
+            cursor: pointer;
+            color: white;
+            font-size: 1em
           }
         }
       }
+      .main {
+        background-color: #fff;
+        margin-top: 40px;
+        padding: 16px;
+        top: 20vh;
+        .show_article {
+          background-color: red;
+          .show_header {
+            background-color: #fff;
+            color: #333;
+            margin-bottom: 40px;
+            .show_header_info {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: flex-start;
+              width: 100%;
+              &__author {
+                background-color: white;
+              }
+              &__time {
+                background-color: yellow;
+              }
+              &__meta {
+                float: right;
+              }
+            }
+            .title {
+              font-size: 4rem;
+              font-weight: 700;
+              margin-bottom: 16px;
+              font-feature-settings: "palt";
+              line-height: 1.4;
+            }
+            #Tags {
+              .Tags_name {
+                .tags_links {
+                }
+              }
+            }
+          }
+        }
+      }
+      // .option {
+      //   background-color: gray;
+      //   margin-top: 40px;
+      //   position: sticky;
+      //   top: 20vh;
+      // }
+    }
+    #container {
     }
   }
 }
