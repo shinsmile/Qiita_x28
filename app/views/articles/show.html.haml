@@ -1,9 +1,49 @@
-
-%h1.title
-  =@article.title
-- @article.tag_list.each do |tag|
-  %span.label.label-primary= tag
-
-%p
-  =qiita_markdown(@article.body)
-
+%link{:href => "https://use.fontawesome.com/releases/v5.0.6/css/all.css", :rel => "stylesheet"}/
+#main
+  .wapper
+    #container{style: "display: grid;"}
+      #item.stick_Menu
+        %span.fa-stack.fa-1x
+          %i.fas.fa-thumbs-up
+        %span.fa-stack.fa-2x
+          %i.fas.fa-folder
+        %span.fa-stack.fa-3x
+          %i.fab.fa-twitter
+        %span.fa-stack.fa-3x
+          %i.fab.fa-facebook-f
+      #item.main
+        .show_article
+          .show_header
+            .show_header_info
+              .show_header_info__author
+                %a
+                  = image_tag "", size: "", alt: "ユーザーアイコン"
+              .show_header_info__time
+                2015年07月31日に更新
+              .show_header_info__meta
+                %i.fab.fa-ellipsis-h.fa#icon
+            %h1.title
+              タイトル
+            #Tags
+              %a.tags_item
+          .content
+            記事内容
+          .show_footer
+            .show_footer_menu
+              %span.fa-stack
+                %i.fas
+              %span.fa-stack
+                %i.fas.fa-paper-plane
+              %span.fa-stack
+                %i.fas
+              %span.fa-stack
+                %i.
+              編集リクエスト・ストック済み・いいねicon
+            .show_footer_social
+              social-icon
+          .show_footer_author_info
+            作者情報
+      #item.option
+      #item.topic
+  #container{style: "display: grid;"}
+    show_footer部分

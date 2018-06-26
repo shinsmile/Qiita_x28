@@ -1,0 +1,168 @@
+#main {
+  .wapper {
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    #container {
+      grid-template-columns: 80px calc(100% - 300px - 80px) 300px;
+      grid-template-rows: minmax(270px,auto) 1fr;
+      padding-top: 24px;
+      padding-bottom: 40px;
+      height: 1000px;
+      width: calc(100% - 50px);
+      display: flex;
+      max-width: 1280px;
+      margin: auto;
+      margin-right: auto;
+      margin-left: auto;
+      .stick_Menu {
+        position: sticky;
+        margin-top: 40px;
+        top: 20vh;
+        .fa-1x {
+          border: 2px solid #55c500;
+          background-color: #fff;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50px;
+          height: 50px;
+          font-size: 24px;
+          position: relative;
+          margin-bottom: 16px;
+          .fa-thumbs-up {
+            cursor: pointer;
+            color: #55c500;
+          }
+        }
+        .fa-2x {
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50px;
+          height: 50px;
+          margin-right: 24px;
+          margin-bottom: 30px;
+          transition: color .1s;
+          background-color: gray;
+          position: relative;
+          .fa-folder {
+            cursor: pointer;
+            color: white;
+            font-size: 0.8em;
+          }
+        }
+        .fa-3x {
+          margin-right: 32px;
+          margin-left: 8px;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          background-color: #aaa;
+          font-size: 18px;
+          margin-bottom: 16px;
+          .fa-twitter {
+            cursor: pointer;
+            color: white;
+            font-size: 1em
+          }
+        }
+        .fa-4x {
+          margin-right: 32px;
+          margin-left: 8px;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          background-color: #aaa;
+          font-size: 18px;
+          margin-bottom: 16px;
+          .fa-facebook-f {
+            cursor: pointer;
+            color: white;
+            font-size: 1em
+          }
+        }
+      }
+      .main {
+        background-color: #fff;
+        margin-top: 40px;
+        padding: 16px;
+        top: 20vh;
+        .show_article {
+          background-color: red;
+          .show_header {
+            background-color: #fff;
+            color: #333;
+            margin-bottom: 40px;
+            .show_header_info {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: flex-start;
+              width: 100%;
+              &__author {
+                display: flex;
+                align-items: center;
+                margin-right: 16px;
+              }
+              &__time {
+                color: #999;
+                font-size: 1em;
+                margin-right: 16px;
+              }
+              &__meta {
+                margin-left: auto;
+                #icon {
+                  cursor: pointer;
+                }
+              }
+            }
+            .title {
+              font-size: 4rem;
+              font-weight: 700;
+              margin-bottom: 16px;
+              font-feature-settings: "palt";
+              line-height: 1.4;
+            }
+            #Tags {
+              display: flex;
+              flex-wrap: wrap;
+              .Tags_name {
+                margin-right: 8px;
+              }
+            }
+          }
+        }
+      }
+      .option {
+        background-color: gray;
+        margin-top: 20px;
+      }
+      // .topic {
+      //   background-color: aqua;
+      //   float: right;
+      //   position: sticky;
+      //   top: 20vh;
+      // }
+    }
+    #container {
+    }
+  }
+}
+
+    // position: sticky;
+    // https://q-az.net/position-sticky/
+    // top: 20vh;
+    // will-change: transform;
+    // 説明URL https://developer.mozilla.org/ja/docs/Web/CSS/will-change
+    // margin-top: 40px;
