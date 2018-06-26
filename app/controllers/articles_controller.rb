@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  layout "main"
 
   def index
   end
@@ -8,8 +9,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    if Article.create(article_params)
-      redirect_to :root
+    if @article = Article.create(article_params)
+      redirect_to action: :show, id: @article.id
     else
       redirect_to action: :new
     end
@@ -25,7 +26,7 @@ class ArticlesController < ApplicationController
       :user_id,
       :title,
       :body
-    )
+    ).merge(tag_list: params[:article][:tag])
   end
 
 
