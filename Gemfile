@@ -41,6 +41,8 @@ gem 'devise'
 gem "acts_as_follower"
 gem 'github-linguist'
 gem 'qiita-markdown'
+gem 'acts-as-taggable-on'
+gem 'erb2haml'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -78,4 +80,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
 gem 'erb2haml'
+gem 'charlock_holmes'
+gem 'rugged'
 gem 'font-awesome-rails'
