@@ -36,25 +36,25 @@
                 float: right;
               }
             }
-             .select-page-container{
-               border-bottom: 1px solid #ddd;
-               display: flex;
-            .select-page{
-              display: inline-block;
-              float: left;
-                li{
-                  background-color: #fff;
-                  color: #555;
+            .select-order-container{
+              border-bottom: 1px solid #ddd;
+              display: flex;
+                .tab-select{
+                  display: inline-block;
                   float: left;
-                  font-size: 14px;
-                  padding: 10px 15px;
-                  display: block;
-                  border: 1px solid #ddd;
-                  border-bottom-color: transparent;
-                  cursor: default;
-                  margin-bottom: -1px;
+                    li{
+                      background-color: #fff;
+                      color: #555;
+                      float: left;
+                      font-size: 14px;
+                      padding: 10px 15px;
+                      display: block;
+                      border: 1px solid #ddd;
+                      border-bottom-color: transparent;
+                      cursor: default;
+                      margin-bottom: -1px;
+                    }
                 }
-            }
                 .page-order{
                   color: #4a4a4a;
                   float: right;
