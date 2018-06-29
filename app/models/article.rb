@@ -1,5 +1,5 @@
 class Article < ApplicationRecord
-  has_many :stocks
+  has_many :stocks, dependent: :destroy
   has_many :users, through: :stocks
   has_many :likes, dependent: :destroy
   has_many :users, through: :likes
@@ -13,4 +13,9 @@ class Article < ApplicationRecord
   def like_user(user_id)
     likes.find_by(user_id: user_id)
   end
+  
+  def stock_user(user_id)
+    stocks.find_by(user_id: user_id)
+  end
+
 end

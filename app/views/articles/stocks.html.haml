@@ -1,0 +1,43 @@
+
+.stocks
+  .content-left
+    .title
+      = image_tag "stock_list_title.png", class:"title_img", alt:""
+    .search
+      = image_tag "stock_search_title.png", class:"search_img", alt:""
+      = image_tag "stock_search_form.png", class:"search_form_img", alt:""
+
+    .tags
+  .content-right
+    - @stocks.each do |stock|
+      .article-left
+        .author-avatar
+          = image_tag "profile.jpg", class:"avatar", alt:""
+        .content
+          .author
+            %span.author-name
+              = link_to stock.article.user.name, "/#{stock.article.user.name}", class: "author-name"
+            %span.date
+              が
+              = "#{stock.article.created_at.strftime('%-m月%d日')}"
+              に投稿
+          .title
+            = link_to stock.article.title, "/articles/#{stock.article.id}", class: "title-text"
+          .stock-and-tags
+            %span{id: "stock-of-#{stock.id}"}
+              = render partial: 'stock', locals: { stock: stock }
+            .tags
+              %ul
+                - stock.article.tags.each do |tag|
+                  %li.tag
+                    = link_to tag.name, "/tags/#{tag.name}", class: "tag-name"
+
+      .article-right
+
+
+
+
+
+
+
+
