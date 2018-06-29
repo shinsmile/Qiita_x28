@@ -92,6 +92,8 @@ GEM
     escape_utils (1.2.1)
     execjs (2.7.0)
     ffi (1.9.25)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     gemoji (3.0.0)
     github-linguist (6.2.0)
       charlock_holmes (~> 0.7.6)
@@ -296,6 +298,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   erb2haml
+  font-awesome-rails
   github-linguist
   haml-rails
   jbuilder (~> 2.5)

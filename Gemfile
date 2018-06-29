@@ -83,4 +83,4 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'charlock_holmes'
 gem 'rugged'
-
+gem 'font-awesome-rails'
