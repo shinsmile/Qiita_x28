@@ -2,6 +2,6 @@ class Like < ApplicationRecord
 
 #アソシエーション
   belongs_to :user
-  belongs_to :article
-
+# likecountの実装
+  belongs_to :article, counter_cache: :likes_count
 end
