@@ -185,7 +185,6 @@
                   .messageform{
                     height: 32px;
                     width: 200px;
-                    text-align: center;
                     font-size: 12px;
                     border: none;
                     border-radius: 4px;
@@ -479,8 +478,137 @@
 
 // ----------------------------------------記事投稿画面のCSSここまで---------------------------------------------------------------------
 
+// ----------------------------------------ストック一覧画面のCSSここから---------------------------------------------------------------------
 
-
+.stocks {
+  width: calc(100% - 120px);
+  height: 1000px;
+  margin: 20px 60px;
+  .content-left {
+    float: left;
+    width: 270px;
+    margin: 0 10px;
+    .title {
+      .title_img {
+        width: 270px;
+        height: 75px;
+      }
+    }
+    .search {
+      .search_img {
+        width: 270px;
+        height: 34px;
+        margin: 1px 0;
+      }
+      .search_form_img {
+        width: 270px;
+        height: 48px;
+      }
+    }
+  }
+  .content-right {
+    padding: 0 10px;
+    float: left;
+    width: calc(100% - 310px);
+    .article-left {
+      float: left;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+      width: calc(100% - 60px);
+      .author-avatar {
+        float: left;
+        width: 48px;
+        margin-right: 12px;
+        .avatar {
+          width: 48px;
+          height: 48px;
+          border-radius: 3px;
+        }
+      }
+      .content {
+        width: calc(100% - 60px);
+        float: right;
+        .author {
+          height: 17px;
+          .author-name {
+            vertical-align: top;
+            font-size: 12px;
+            color: #337ab7;
+            text-decoration: none;
+          }
+          .date {
+            vertical-align: top;
+            font-size: 12px;
+          }
+        }
+        .title {
+          border-top: 2px;
+          line-height: 1.42857;
+          margin-bottom: 7.8px;
+          .title-text {
+            color: #337ab7;
+            font-size: 16px;
+            text-decoration: none;
+          }
+        }
+        .stock-and-tags {
+          height: 22.78px;
+          .stock {
+            float: left;
+            width: 23px;
+            .btn-bg {
+              border: 0;
+              padding: 0;
+              .stock-button {
+                width: 23px;
+                height: 20px;
+              }
+            }
+          }
+          .tags {
+            float: right;
+            margin-left: 8px;
+            width:  calc(100% - 31px);
+            ul {
+              .tag {
+                position: relative;
+                font-size: 12px;
+                vertical-align: top;
+                display: inline;
+                margin: 0 12px 6px 6px;
+                padding: 2.4px 7.2px;
+                background-color: #e0e0e0;
+                border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;
+                text-decoration: none;
+                .tag-name {
+                  vertical-align: top;
+                  font-size: 12px;
+                  color: #444;
+                  text-decoration: none;
+                }
+              }
+              .tag::before {
+                position: absolute;
+                content: '';
+                left: -16.78px;
+                border-top: 8.39px solid transparent;
+                border-right: 8.39px solid #e0e0e0;
+                border-bottom: 8.39px solid transparent;
+                border-left: 8.39px solid transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+    .article-right {
+      float: right;
+      width: 44px;
+      height: 100px;
+    }
+  }
+}
 
 
 
