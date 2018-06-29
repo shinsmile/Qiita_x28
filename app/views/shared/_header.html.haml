@@ -34,7 +34,7 @@
             / placeholderの記述が反映されない
       - if user_signed_in?
         .short-header-container_right
-          .stock
+          = link_to "", articles_stocks_path, class: "stock"
           = link_to "", new_article_path, class: "postbutton"
           / .notification
           .login-user
@@ -59,15 +59,3 @@
           = link_to "", new_user_registration_path, class: "signup_button"
           .login
           = link_to "", new_user_session_path, class: "login_button"
-
-/ -------------クリックして一覧のhaml(js導入後？)--------------
-/ .title_box_list
-/   .list-1
-/     Qiita
-/   .list-2
-/     .team_now
-/       ログイン中のチームがありません
-/     .team_login
-/       Qitia:Teamにログイン
-/ -------------クリックして一覧のhaml(js導入後？)--------------
-

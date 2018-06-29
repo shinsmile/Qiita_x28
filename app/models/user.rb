@@ -5,11 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   #アソシエーション
-  has_many :stocks
+  has_many :stocks, dependent: :destroy
   has_many :articles, through: :stocks
   has_many :user_tags
   has_many :tags, through: :user_tags
-  has_many :likes
+  has_many :likes, dependent: :destroy
   has_many :articles, through: :likes
   has_many :articles
   has_many :comments

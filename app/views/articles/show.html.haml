@@ -1,9 +1,0 @@
-
-%h1.title
-  =@article.title
-- @article.tag_list.each do |tag|
-  %span.label.label-primary= tag
-
-%p
-  =qiita_markdown(@article.body)
-
