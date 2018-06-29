@@ -28,10 +28,12 @@
               .community_guide
               .manual
         .search
-          .search_megane
-          .search_input
-            %input{ class: "messageform", placeholder: 'キーワードを入力', type: 'search'}
-            / placeholderの記述が反映されない
+          = search_form_for search, url: articles_search_path do |f|
+            = f.text_field :title_or_body_cont, class: "messageform"
+        / .search
+        /   .search_megane
+        /   .search_input
+        /     %input{ class: "messageform", placeholder: 'キーワードを入力', type: 'search'}
       - if user_signed_in?
         .short-header-container_right
           = link_to "", articles_stocks_path, class: "stock"

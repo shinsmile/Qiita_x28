@@ -26,6 +26,16 @@ class ArticlesController < ApplicationController
     @stocks = Stock.where(user_id: current_user.id, is_stocked: 1)
   end
 
+  def stocks_search
+    @q = Article.ransack(params[:q])
+    @articles = @q.result
+  end
+
+  def search
+    @q = Article.ransack(params[:q])
+    @articles = @q.result
+  end
+
   private
   def article_params
     params.require(:article).permit(

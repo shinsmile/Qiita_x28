@@ -4,8 +4,10 @@
     .title
       = image_tag "stock_list_title.png", class:"title_img", alt:""
     .search
-      = image_tag "stock_search_title.png", class:"search_img", alt:""
-      = image_tag "stock_search_form.png", class:"search_form_img", alt:""
+      = search_form_for @search, url: articles_stocks_search_path do |f|
+        %h3 ストック内検索
+        = f.text_field :title_or_body_cont, class: "search-field"
+        = image_submit_tag "search_button_off.png", mouseover: "search_button_on.png", class: "actions"
 
     .tags
   .content-right
@@ -33,8 +35,6 @@
                     = link_to tag.name, "/tags/#{tag.name}", class: "tag-name"
 
       .article-right
-
-
 
 
 
