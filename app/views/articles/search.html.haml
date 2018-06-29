@@ -1,0 +1,11 @@
+
+.search_result
+  - @articles.each do |article|
+    - article.stocks.each do |stock|
+      .article-title
+        = article.title
+      .article-tags
+        - article.tags.each do |tag|
+          = tag.name
+      .article-text
+        = article.body
