@@ -13,7 +13,8 @@ class User < ApplicationRecord
   has_many :articles, through: :likes
   has_many :articles
   has_many :comments
-
+  # likescount
+  has_many :likes, dependent: :destroy
   #フォロー機能
   acts_as_followable # フォロワー機能
   acts_as_follower   # フォロー機能

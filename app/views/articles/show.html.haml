@@ -4,12 +4,14 @@
     #container{style: "display: grid;"}
       #item.stick_Menu
         %span#thumbs
+          %a.likeCount
+            = render partial: 'likes/like', locals: { article: @article, likes: @likes }
           %i.fas.fa-thumbs-up
-        %span.fa-stack.fa-2x#folder
+        %span.fa-2x#folder
           %i.fas.fa-folder
-        %span.fa-stack#smallCircle
+        %span#smallCircle
           %i.fab.fa-twitter
-        %span.fa-stack#smallCircle
+        %span#smallCircle
           %i.fab.fa-facebook-f
       #item.main
         .show_article
@@ -29,7 +31,7 @@
               タイトル
             #Tags
               %a.tags_item
-              tags
+                tags
           .content
             / = @articles.body
             記事
@@ -67,7 +69,18 @@
                 %a.like_icon
                   Like
           .show_footer_author_info
-      #item.option
+            %a.profile
+              = image_tag "profile.jpg", class: "profile_picture", size: "60x60"
+            .author_info_body
+              .author_info_header
+                %h1.author_name
+                  @ねこねこ
+              .author_info_description
+                テキスト
+              .author_info_footer
+                %span.fa-stack.fa-1x#follow
+                  %i.fas.fa-user-plus
+                  %a.follow
+                    フォロー
       #item.topic
-  #container{style: "display: grid;"}
-    show_footer部分
+        目次
