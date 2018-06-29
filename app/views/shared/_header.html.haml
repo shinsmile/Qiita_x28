@@ -29,7 +29,8 @@
               .manual
         .search
           = search_form_for search, url: articles_search_path do |f|
-            = f.text_field :title_or_body_cont, class: "messageform"
+            = f.text_field :title_or_body_cont, placeholder: "キーワードを入力", class: "messageform"
+            .search-icon
         / .search
         /   .search_megane
         /   .search_input
