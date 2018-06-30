@@ -3,7 +3,7 @@
   .wapper
     #container{style: "display: grid;"}
       #item.stick_Menu
-        %span.thumbs{ id: "like-of-#{@article.id}"}
+        %span.thumbs_icon{ id: "like-of-#{@article.id}"}
           = render partial: 'likes/like', locals: { article: @article, likes: @likes }
         %span.fa-2x#folder
           %i.fas.fa-folder
