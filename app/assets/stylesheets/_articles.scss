@@ -3,6 +3,7 @@
   background-color: #55c500;
   height: 56px;
   display: block;
+  min-width: 845px;
   .short-header{
     color: #fff;
     // padding-right: 16px;
@@ -659,7 +660,7 @@
 .stocks-search-content {
   margin-top: 23px;
   padding: 0 40px;
-  height: 1000px;
+  min-width: 845px;
   .content-left {
     width: calc(100% - 353px);
     height: 1000px;
@@ -845,7 +846,7 @@
 .search-content {
   margin-top: 23px;
   padding: 0 40px;
-  height: 1000px;
+  min-width: 845px;
   .content-left {
     width: calc(100% - 353px);
     height: 1000px;
