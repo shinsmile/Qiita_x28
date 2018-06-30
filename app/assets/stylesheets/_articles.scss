@@ -652,17 +652,376 @@
   }
 }
 
+// ----------------------------------------ストック一覧画面のCSSここまで---------------------------------------------------------------------
 
+// ----------------------------------------検索結果一覧画面（ストック済み）のCSSここから---------------------------------------------------------------------
 
+.stocks-search-content {
+  margin-top: 23px;
+  padding: 0 40px;
+  height: 1000px;
+  .content-left {
+    width: calc(100% - 353px);
+    height: 1000px;
+    float: left;
+    padding: 0 10px;
+    .search-window {
+      height: 33px;
+      margin-bottom: 27px;
+      .search-field {
+        float: left;
+        height: 19px;
+        width: calc(100% - 136px);
+        margin-right: 8px;
+        padding: 6px 12px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+      }
+      .search-btn {
+        float: right;
+        width: 102px;
+        height: 33px;
+      }
+    }
+    .navigation {
+      width: 100%;
+      height: 41px;
+      border-bottom: 1px solid #ddd;
+      .nav-tabs {
+        .nav-tab-all {
+          display: inline-block;
+          color: #337ab7;
+          font-size: 14px;
+          height: 20px;
+          padding: 10px 15px;
+          margin-right: 2px;
+          border: 1px;
+          border-radius: 3px 3px 0 0;
+          a {
+            color: #337ab7;
+            text-decoration: none;
+          }
+        }
+        .nav-tab-all:hover {
+          color: #555;
+          background-color: #f2f2f2;
+        }
+        .nav-tab-stocked {
+          display: inline-block;
+          color: #555;
+          font-size: 14px;
+          height: 20px;
+          padding: 10px 15px;
+          border: 1px solid #ddd;
+          border-radius: 3px 3px 0 0;
+          border-bottom: 1px solid white;
+        }
+        .count {
+          padding: 3px 7px;
+          font-size: 12px;
+          font-weight: 700;
+          color: #fff;
+          line-height: 1;
+          vertical-align: middle;
+          text-align: center;
+          background-color: #999;
+          border-radius: 10px;
+        }
+      }
+      .sort-btn {
 
+      }
+    }
+    .articles {
+      float: left;
+      width: 100%;
+      .article-left {
+        float: left;
+        padding: 15px 0;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        .author-avatar {
+          float: left;
+          width: 25px;
+          .avatar {
+            width: 25px;
+            height: 25px;
+            border-radius: 3px;
+          }
+        }
+        .content {
+          width: calc(100% - 35px);
+          float: right;
+          .author {
+            height: 17px;
+            .author-name {
+              vertical-align: top;
+              font-size: 12px;
+              color: #337ab7;
+              text-decoration: none;
+            }
+            .date {
+              vertical-align: top;
+              font-size: 12px;
+            }
+          }
+          .title {
+            border-top: 2px;
+            line-height: 1.42857;
+            margin: 4px 0;
+            .title-text {
+              color: #337ab7;
+              font-size: 16px;
+              text-decoration: none;
+            }
+          }
+          .tags {
+            float: right;
+            margin-left: 8px;
+            width: 100%;
+            ul {
+              .tag {
+                position: relative;
+                font-size: 14px;
+                vertical-align: top;
+                display: inline;
+                margin: 0 5px 0 8.330px;
+                padding: 0 5px;
+                background-color: #e0e0e0;
+                border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;
+                text-decoration: none;
+                .tag-name {
+                  vertical-align: top;
+                  font-size: 12px;
+                  color: #444;
+                  text-decoration: none;
+                }
+              }
+              .tag::before {
+                position: absolute;
+                top: 0px;
+                content: '';
+                left: -14px;
+                border-top: 7px solid transparent;
+                border-right: 7px solid #e0e0e0;
+                border-bottom: 7px solid transparent;
+                border-left: 7px solid transparent;
+              }
+            }
+          }
+          .body {
+            font-size: 14px;
+            color: #999;
+            line-height: 1.42857;
+            margin-top: 3px;
+          }
+        }
+      }
+    }
+    .pagination {
 
+    }
+  }
+  .content-right {
+    float: right;
+    width: 313px;
+    padding: 0 10px;
+    .search-guide {
+      height: 591px;
+      width: 313px;
+      background-image: url(search_guide.png);
+      background-size: 313px 591px;
+    }
+  }
+}
 
+// ----------------------------------------検索結果一覧画面（ストック済み）のCSSここまで---------------------------------------------------------------------
 
+// ----------------------------------------検索結果一覧画面のCSSここから---------------------------------------------------------------------
 
+.search-content {
+  margin-top: 23px;
+  padding: 0 40px;
+  height: 1000px;
+  .content-left {
+    width: calc(100% - 353px);
+    height: 1000px;
+    float: left;
+    padding: 0 10px;
+    .search-window {
+      height: 33px;
+      margin-bottom: 27px;
+      .search-field {
+        float: left;
+        height: 19px;
+        width: calc(100% - 136px);
+        margin-right: 8px;
+        padding: 6px 12px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+      }
+      .search-btn {
+        float: right;
+        width: 102px;
+        height: 33px;
+      }
+    }
+    .navigation {
+      width: 100%;
+      height: 41px;
+      border-bottom: 1px solid #ddd;
+      .nav-tabs {
+        .nav-tab-all {
+          display: inline-block;
+          color: #555;
+          font-size: 14px;
+          height: 20px;
+          padding: 10px 15px;
+          border: 1px solid #ddd;
+          border-radius: 3px 3px 0 0;
+          border-bottom: 1px solid white;
+        }
+        .count {
+          padding: 3px 7px;
+          font-size: 12px;
+          font-weight: 700;
+          color: #fff;
+          line-height: 1;
+          vertical-align: middle;
+          text-align: center;
+          background-color: #999;
+          border-radius: 10px;
+        }
+        .nav-tab-stocked {
+          display: inline-block;
+          color: #337ab7;
+          font-size: 14px;
+          height: 20px;
+          padding: 10px 15px;
+          margin-right: 2px;
+          border: 1px;
+          border-radius: 3px 3px 0 0;
+          a {
+            color: #337ab7;
+            text-decoration: none;
+          }        }
+        .nav-tab-stocked:hover {
+          color: #555;
+          background-color: #f2f2f2;
+        }
+      }
+      .sort-btn {
 
+      }
+    }
+    .articles {
+      float: left;
+      width: 100%;
+      .article-left {
+        float: left;
+        padding: 15px 0;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        .author-avatar {
+          float: left;
+          width: 25px;
+          .avatar {
+            width: 25px;
+            height: 25px;
+            border-radius: 3px;
+          }
+        }
+        .content {
+          width: calc(100% - 35px);
+          float: right;
+          .author {
+            height: 17px;
+            .author-name {
+              vertical-align: top;
+              font-size: 12px;
+              color: #337ab7;
+              text-decoration: none;
+            }
+            .date {
+              vertical-align: top;
+              font-size: 12px;
+            }
+          }
+          .title {
+            border-top: 2px;
+            line-height: 1.42857;
+            margin: 4px 0;
+            .title-text {
+              color: #337ab7;
+              font-size: 16px;
+              text-decoration: none;
+            }
+          }
+          .tags {
+            float: right;
+            margin-left: 8px;
+            width: 100%;
+            ul {
+              .tag {
+                position: relative;
+                font-size: 14px;
+                vertical-align: top;
+                display: inline;
+                margin: 0 5px 0 8.330px;
+                padding: 0 5px;
+                background-color: #e0e0e0;
+                border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;
+                text-decoration: none;
+                .tag-name {
+                  vertical-align: top;
+                  font-size: 12px;
+                  color: #444;
+                  text-decoration: none;
+                }
+              }
+              .tag::before {
+                position: absolute;
+                top: 0px;
+                content: '';
+                left: -14px;
+                border-top: 7px solid transparent;
+                border-right: 7px solid #e0e0e0;
+                border-bottom: 7px solid transparent;
+                border-left: 7px solid transparent;
+              }
+            }
+          }
+          .body {
+            font-size: 14px;
+            color: #999;
+            line-height: 1.42857;
+            margin-top: 3px;
+          }
+        }
+      }
+    }
+    .pagination {
 
-
-
+    }
+  }
+  .content-right {
+    float: right;
+    width: 313px;
+    padding: 0 10px;
+    .search-guide {
+      height: 591px;
+      width: 313px;
+      background-image: url(search_guide.png);
+      background-size: 313px 591px;
+    }
+  }
+}
 
 
 
