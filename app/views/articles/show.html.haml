@@ -9,9 +9,9 @@
           %i.fas.fa-thumbs-up
         %span.fa-2x#folder
           %i.fas.fa-folder
-        %span#smallCircle
+        %span#small_twitter
           %i.fab.fa-twitter
-        %span#smallCircle
+        %span#small_facebook
           %i.fab.fa-facebook-f
       #item.main
         .show_article
@@ -21,14 +21,13 @@
                 %a.profile
                   = image_tag "profile.jpg", class: "profile_picture", size: "32x32"
                 %h1.author_name
-                  ねこねこ
+                  / = link_to article.user.name, "mypage_link"
               .show_header_info__time
-                form_posted_time(articles.created_at)
+                form_posted_time(article.created_at)
               .show_header_info__meta
                 %i.fab.fa-ellipsis-h.fa#icon
             %h1.title
               / = @articles.title
-              タイトル
             #Tags
               %a.tags_item
                 tags
