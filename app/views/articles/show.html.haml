@@ -3,10 +3,8 @@
   .wapper
     #container{style: "display: grid;"}
       #item.stick_Menu
-        %span#thumbs
-          %a.likeCount
-            = render partial: 'likes/like', locals: { article: @article, likes: @likes }
-          %i.fas.fa-thumbs-up
+        %span.thumbs{ id: "like-of-#{@article.id}"}
+          = render partial: 'likes/like', locals: { article: @article, likes: @likes }
         %span.fa-2x#folder
           %i.fas.fa-folder
         %span#small_twitter
