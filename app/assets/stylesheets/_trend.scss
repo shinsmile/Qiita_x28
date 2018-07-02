@@ -1,21 +1,22 @@
-.body{
+.trend{
   font-size: 1.4rem;
   color: #333;
-  box-sizing: inherit;
-  display: inherit;
+ // box-sizing: inherit;
+ // display: inline;
 
   .allWrapper{
-    background-color: #f6f6f6;;
-    min-height: 800vh;
+    background-color: #f6f6f6;
+    min-height: 200vh;
 
     .container1{
       padding-top: 32px;
       padding-right: 16px;
       padding-left: 16px;
       background-color: #f6f6f6;
-      box-sizing: inherit;
-      display: block;
+      //box-sizing: inherit;
+      //display: block;
       margin: auto;
+
 
       .menu-bar{
         background-color: #f6f6f6;
@@ -24,11 +25,12 @@
         flex-direction: column;
         align-items: flex-start;
         width: 185px;
-        height: 1000px;
+        //height: 3000px;
         float: left;
-        font-size: inherit;
+       // font-size: inherit;
+        padding-left: 110px;
 
-        .menu-item1{
+        .menu-items1{
           padding-left: 16px;
           padding: 8px;
           margin-bottom: 8px;
@@ -40,11 +42,10 @@
           border-bottom-left-radius: 3px;
           width: 92%;
           font-size: 12px;
-          box-sizing: inherit;
-
+          display: flex;
         }
 
-        .menu-item2{
+        .menu-items2{
           padding-left: 16px;
           padding: 8px;
           margin-bottom: 8px;
@@ -56,10 +57,11 @@
           border-bottom-left-radius: 3px;
           width: 92%;
           font-size: 12px;
-          box-sizing: inherit;
+          display: flex;
+          //box-sizing: inherit;
         }
 
-        .menu-item3{
+        .menu-items3{
           padding-left: 16px;
           padding: 8px;
           margin-bottom: 8px;
@@ -71,18 +73,20 @@
           border-bottom-left-radius: 3px;
           width: 92%;
           font-size: 12px;
-          box-sizing: inherit;
+          display: flex;
+         // box-sizing: inherit;
         }
       }
 
       .main-view{
         margin-bottom: 24px;
-        min-width: 50vh;
+        min-width: 85vh;
         background-color: #fff;
         margin: auto 0;
+        float: left;
         .main-item{
-          box-sizing: inherit;
-          display: block;
+         // box-sizing: inherit;
+         // display: block;
 
           .main-header{
             display: flex;
@@ -91,14 +95,15 @@
             line-height: 1;
             border-bottom: 1px solid #e8e8e8;
             padding: 16px;
-            box-sizing: inherit;
-            font-size: 16px;
-            .main-label{
-              font-size: 12px;
+            //box-sizing: inherit;
+            font-size: 18px;
+            .main-label1{
+              font-size: 16px;
               margin-top: 2px;
               margin-right: 8px;
-              box-sizing: inherit;
-              display: block;
+              display: inline-block;
+              //box-sizing: inherit;
+              //display: block;
             }
               .main-label2{
                 font-size: 14px;
@@ -122,6 +127,7 @@
                     font-size: 12px;
                     color: #999;
                     margin: 0 0 5px 0 ;
+                    display: flex;
                   }
                   &__title{
                     display: inline-block;
