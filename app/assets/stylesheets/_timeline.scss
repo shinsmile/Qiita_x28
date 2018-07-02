@@ -1,20 +1,20 @@
-.body{
+.timeline{
   font-size: 1.4rem;
   color: #333;
-  box-sizing: inherit;
-  display: inherit;
+  //box-sizing: inherit;
+  //display: inline;
 
   .allWrapper{
-    background-color: #f6f6f6;;
-    min-height: 800vh;
+    background-color: #f6f6f6;
+    min-height: 200vh;
 
     .container1{
       padding-top: 32px;
       padding-right: 16px;
       padding-left: 16px;
       background-color: #f6f6f6;
-      box-sizing: inherit;
-      display: block;
+      //box-sizing: inherit;
+     //display: block;
       margin: auto;
 
       .menu-bar{
@@ -24,9 +24,10 @@
         flex-direction: column;
         align-items: flex-start;
         width: 185px;
-        height: 1000px;
+        //height: 3000px;
         float: left;
-        font-size: inherit;
+        //font-size: inherit;
+        padding-left: 110px;
 
         .menu-item1{
           padding-left: 16px;
@@ -40,7 +41,7 @@
           border-bottom-left-radius: 3px;
           width: 92%;
           font-size: 12px;
-          box-sizing: inherit;
+          box-sizing: flex;
         }
 
         .menu-item2{
@@ -55,7 +56,7 @@
           border-bottom-left-radius: 3px;
           width: 92%;
           font-size: 12px;
-          box-sizing: inherit;
+          box-sizing: flex;
         }
 
         .menu-item3{
@@ -70,18 +71,19 @@
           border-bottom-left-radius: 3px;
           width: 92%;
           font-size: 12px;
-          box-sizing: inherit;
+          box-sizing: flex;
         }
       }
 
       .main-view{
         margin-bottom: 24px;
-        min-width: 50vh;
+        min-width: 85vh;
         background-color: #fff;
         margin: auto 0;
+        float: left;
         .main-item{
-          box-sizing: inherit;
-          display: block;
+          //box-sizing: inherit;
+          //display: block;
 
           .main-header{
             display: flex;
@@ -90,14 +92,14 @@
             line-height: 1;
             border-bottom: 1px solid #e8e8e8;
             padding: 16px;
-            box-sizing: inherit;
-            font-size: 16px;
+            //box-sizing: inherit;
+            font-size: 18px;
             .main-label{
-              font-size: 12px;
+              font-size: 16px;
               margin-top: 2px;
               margin-right: 8px;
-              box-sizing: inherit;
-              display: block;
+             //box-sizing: inherit;
+              //display: block;
             }
               .main-label2{
                 font-size: 14px;
