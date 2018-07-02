@@ -1,9 +1,13 @@
 class StocksController < ApplicationController
-  before_action :set_stock, only: [:create, :update]
+  before_action :set_stock, only: [:create, :destory, :update]
 
   def create
-    # @stocks = Stock.where(user_id: current_user.id)
     @stock = Stock.create(user_id: current_user.id, article_id: params[:article_id])
+  end
+
+  def destory
+    stock = Stock.find_by(user_id: current_user.id, article_id: params[:article_id])
+    stock.destroy
   end
 
   def update

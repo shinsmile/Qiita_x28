@@ -20,6 +20,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @stock = Stock.find(params[:id])
   end
 
   def stocks

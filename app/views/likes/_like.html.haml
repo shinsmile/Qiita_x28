@@ -4,31 +4,18 @@
       .thumbs
         %i.fas.fa-thumbs-up.fa-2x
         %a.likeCount
-          %span{:tabindex => "-1"}
+          %span
             = article.likes_count
   - else
     = button_to article_likes_path(article), id: "like-button", remote: true do
       .check_icon
         %i.fas.fa-check.fa-2x
         %a.likeCount
-          %span{:tabindex => "0"}
+          %span
             = article.likes_count
 - else
   .thumbs
     %i.fas.fa-thumbs-up.fa-2x
     %a.likeCount
-      %span{:tabindex => "-1"}
+      %span
         = article.likes_count
-/ ↑サインインしていない、いいね数だけが表示
-/ article.likes_countにいいねに紐づいたuser一覧の表示
-
-/ - if current_user && article.like_user(current_user.id)
-/   = link_to article_like_path(article.like_user(current_user.id), article_id: article.id), method: :delete, id: "like-buttons", remote: true do
-/     .ui.labeled.button{:tabindex => "0"}
-/       %span
-/         = article.likes.count
-/ - else
-/   = link_to article_likes_path(article), method: :post, id: "like-buttons", remote: true do
-/     .ui.labeled.button{:tabindex => "0"}
-/       %span
-/         = article.likes.count

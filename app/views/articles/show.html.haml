@@ -5,8 +5,8 @@
       #item.stick_Menu
         %span.thumbs_icon{ id: "like-of-#{@article.id}"}
           = render partial: 'likes/like', locals: { article: @article, likes: @likes }
-        %span.fa-2x#folder
-          %i.fas.fa-folder
+        %span.folder_icon{ id: "stocks-of-#{@stock.id}"}
+          = render partial: 'stocks/show', locals: { article: @article, stocks: @stocks }
         %span#small_twitter
           %i.fab.fa-twitter
         %span#small_facebook
