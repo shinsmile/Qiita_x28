@@ -8,7 +8,7 @@
         %span.folder_icon{ id: "stocks-of-#{@stock.id}"}
           = render partial: 'stocks/show', locals: { article: @article, stocks: @stocks }
         %span#small_twitter
-          %i.fab.fa-twitter
+          %a.fab.fa-twitter{:href => "https://twitter.com/intent/tweet"}
         %span#small_facebook
           %i.fab.fa-facebook-f
       #item.main
@@ -49,7 +49,7 @@
             .show_footer_social
               %span.fa-stack#twitter
                 %i.fab.fa-twitter
-                %a.tweet
+                %a.tweet{:href => "https://twitter.com/intent/tweet"}
                   tweet
               %span.fa-stack#bold
                 %i.fas.fa-bold
