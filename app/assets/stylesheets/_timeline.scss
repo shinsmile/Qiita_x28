@@ -14,8 +14,9 @@
       padding-left: 16px;
       background-color: #f6f6f6;
       //box-sizing: inherit;
-     //display: block;
+      //display: block;
       margin: auto;
+
 
       .menu-bar{
         background-color: #f6f6f6;
@@ -26,40 +27,10 @@
         width: 185px;
         //height: 3000px;
         float: left;
-        //font-size: inherit;
+       // font-size: inherit;
         padding-left: 110px;
 
-        .menu-item1{
-          padding-left: 16px;
-          padding: 8px;
-          margin-bottom: 8px;
-          position: relative;
-          font-weight: 600;
-          color: gray;
-          background-color: #f6f6f6;;
-          border-top-left-radius: 3px;
-          border-bottom-left-radius: 3px;
-          width: 92%;
-          font-size: 12px;
-          box-sizing: flex;
-        }
-
-        .menu-item2{
-          padding-left: 16px;
-          padding: 8px;
-          margin-bottom: 8px;
-          position: relative;
-          font-weight: 400;
-          color: #fff;
-          background-color: #55c500;
-          border-top-left-radius: 3px;
-          border-bottom-left-radius: 3px;
-          width: 92%;
-          font-size: 12px;
-          box-sizing: flex;
-        }
-
-        .menu-item3{
+        .menu-items1{
           padding-left: 16px;
           padding: 8px;
           margin-bottom: 8px;
@@ -71,7 +42,39 @@
           border-bottom-left-radius: 3px;
           width: 92%;
           font-size: 12px;
-          box-sizing: flex;
+          display: flex;
+        }
+
+        .menu-items2{
+          padding-left: 16px;
+          padding: 8px;
+          margin-bottom: 8px;
+          position: relative;
+          font-weight: 400;
+          color: #fff;
+          background-color: #55c500;
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+          width: 92%;
+          font-size: 12px;
+          display: flex;
+          //box-sizing: inherit;
+        }
+
+        .menu-items3{
+          padding-left: 16px;
+          padding: 8px;
+          margin-bottom: 8px;
+          position: relative;
+          font-weight: 600;
+          color: gray;
+          background-color: #f6f6f6;
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+          width: 92%;
+          font-size: 12px;
+          display: flex;
+         // box-sizing: inherit;
         }
       }
 
@@ -82,8 +85,8 @@
         margin: auto 0;
         float: left;
         .main-item{
-          //box-sizing: inherit;
-          //display: block;
+         // box-sizing: inherit;
+         // display: block;
 
           .main-header{
             display: flex;
@@ -94,11 +97,12 @@
             padding: 16px;
             //box-sizing: inherit;
             font-size: 18px;
-            .main-label{
+            .main-label1{
               font-size: 16px;
               margin-top: 2px;
               margin-right: 8px;
-             //box-sizing: inherit;
+              display: inline-block;
+              //box-sizing: inherit;
               //display: block;
             }
               .main-label2{
@@ -154,6 +158,7 @@
                 }
             }
         }
+
         .container-body-right{
           width: 366px;
           height: 100%;
