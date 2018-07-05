@@ -6,7 +6,8 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     @user.update(user_params)
-    redirect_to :root
+    @tags = params[:tag]
+    @tag = params[:this_tag]
   end
 
   def user_params
