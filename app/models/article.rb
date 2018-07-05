@@ -13,7 +13,7 @@ class Article < ApplicationRecord
   def like_user(user_id)
     likes.find_by(user_id: user_id)
   end
-  
+
   def stock_user(user_id)
     stocks.find_by(user_id: user_id)
   end
