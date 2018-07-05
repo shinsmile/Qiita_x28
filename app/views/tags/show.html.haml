@@ -1,0 +1,87 @@
+
+- tags = []
+- current_user.taggings.each do |tagging|
+  - tags << tagging.tag.name
+- for tag in @tags
+  - if tag.name == @tag
+    - this_tag = tag
+
+.show-tag
+  .content-left
+    .title
+      .tag-icon
+      .tag-name
+        %h1
+          = this_tag.name
+      .follow-btn
+        - if tags.include?(@tag)
+          - tags.delete(@tag)
+          .btn
+            = link_to image_tag('unfollow_tag_off.png'),user_path(name: current_user.name, email: current_user.email, tag: tags), class: "unfollow", method: :patch
+        - else
+          - tags << @tag
+          .btn
+            = link_to image_tag('follow_tag_off.png'), user_path(name: current_user.name, email: current_user.email, tag: tags), class: "follow", method: :patch
+    .count
+      .posts
+        .posts-count
+          - posts_count = []
+          - for tagging in this_tag.taggings
+            - if tagging.taggable_type == "Article"
+              - posts_count << tagging.taggable_type
+          = posts_count.length
+        .title
+          = "投稿"
+      .followers
+        .followers-count
+          - followers_count = []
+          - for tagging in this_tag.taggings
+            - if tagging.taggable_type == "User"
+              - followers_count << tagging.taggable_type
+          = followers_count.length
+        .title
+          = "フォロワー"
+      .explanation
+        = "#{@tag}に関する情報が集まっています。現在#{posts_count.length}件の投稿があります。また#{followers_count.length}人のユーザーがPythonタグをフォローしています。"
+    .articles
+      - taggings = []
+      - articles = []
+      - for tagging in this_tag.taggings
+        - if tagging.taggable_type == "Article"
+          - taggings << tagging.taggable_id
+      - for article in @articles
+        - if taggings.include?(article.id)
+          - articles << article
+      .liked-articles
+        .top
+        .contents
+      .newest-articles
+        - articles.sort! do |a, b|
+          - b[:id] <=> a[:id]
+        .top
+          = "新着投稿"
+        .contents
+          - articles.each do |article|
+            .article
+              .author-avatar
+                = image_tag "profile.jpg", class:"avatar", alt:""
+              .content
+                .author
+                  %span.author-name
+                    = link_to article.user.name, "/#{article.user.name}", class: "author-name"
+                  %span.date
+                    が
+                    = "#{article.created_at.strftime('%-m月%d日')}"
+                    に投稿
+                .content-title
+                  = link_to article.title, "/articles/#{article.id}", class: "title-text"
+                .stock-and-tags
+                  %span{id: "stock-of-#{article.id}"}
+                    = render partial: 'stock', locals: { article: article }
+                  .tags
+                    %ul
+                      - article.tags.each do |tag|
+                        %li.tag
+                          = link_to tag.name, "/tags/#{tag.name}", class: "tag-name"
+
+  .content-right

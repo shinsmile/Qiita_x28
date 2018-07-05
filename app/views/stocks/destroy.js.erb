@@ -1,0 +1,1 @@
+$("#stock-of-<%= @article.id %>").html("<%= j(render partial: 'tags/stock', locals: { article: @article }) %>")
