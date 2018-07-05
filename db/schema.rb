@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_05_044648) do
+ActiveRecord::Schema.define(version: 2018_07_05_063815) do
 
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 2018_07_05_044648) do
     t.datetime "created_at"
     t.index ["context"], name: "index_taggings_on_context"
     t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
+    t.index ["tag_id", "taggable_type", "taggable_id"], name: "index_taggings_on_tag_id_and_taggable_type_and_taggable_id", unique: true
     t.index ["tag_id"], name: "index_taggings_on_tag_id"
     t.index ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context"
     t.index ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy"

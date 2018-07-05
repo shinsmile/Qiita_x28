@@ -14,14 +14,8 @@
         %h1
           = this_tag.name
       .follow-btn
-        - if tags.include?(@tag)
-          - tags.delete(@tag)
-          .btn
-            = link_to image_tag('unfollow_tag_off.png'),user_path(name: current_user.name, email: current_user.email, tag: tags), class: "unfollow", method: :patch
-        - else
-          - tags << @tag
-          .btn
-            = link_to image_tag('follow_tag_off.png'), user_path(name: current_user.name, email: current_user.email, tag: tags), class: "follow", method: :patch
+        %span{id: "tag-follow-btn"}
+          = render partial: 'tag_follow', locals: { tags: tags, tag: @tag }
     .count
       .posts
         .posts-count
