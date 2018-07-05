@@ -3,13 +3,11 @@
   margin-top: 23px;
   padding: 0 60px;
   min-width: 845px;
-  height: 1000px;
   .content-left {
     padding: 0 10px;
     border-right: 1px solid #ddd;
     float: left;
     width: 67%;
-    height: 1000px;
     .title {
       width: 265px;
       height: 37px;
@@ -106,11 +104,7 @@
     }
     .articles {
       .liked-articles {
-        .top {
-        }
-      }
-
-      .newest-articles {
+        float: left;
         .top {
           padding-top: 20px;
           font-size: 16px;
@@ -214,8 +208,114 @@
               }
             }
           }
+        }
+      }
 
-
+      .newest-articles {
+        float: left;
+        .top {
+          padding-top: 20px;
+          font-size: 16px;
+          font-weight: 700;
+          color: #4a4a4a;
+          margin-bottom: 15px;
+        }
+        .contents {
+          .article {
+            float: left;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            width: calc(100% - 16px);
+            .author-avatar {
+              float: left;
+              width: 48px;
+              margin-right: 12px;
+              .avatar {
+                width: 48px;
+                height: 48px;
+                border-radius: 3px;
+              }
+            }
+            .content {
+              float: left;
+              width: calc(100% - 60px);
+              .author {
+                height: 17px;
+                .author-name {
+                  vertical-align: top;
+                  font-size: 12px;
+                  color: #337ab7;
+                  text-decoration: none;
+                }
+                .date {
+                  vertical-align: top;
+                  font-size: 12px;
+                }
+              }
+              .content-title {
+                width: 100%;
+                border-top: 2px;
+                padding-bottom: 0;
+                margin-bottom: 8px;
+                .title-text{
+                  width: 100%;
+                  margin-bottom: 8px;
+                  color: #337ab7;
+                  font-size: 16px;
+                  text-decoration: none;
+                }
+              }
+              .stock-and-tags {
+                height: 22.78px;
+                .stock {
+                  float: left;
+                  width: 23px;
+                  .btn-bg {
+                    border: 0;
+                    padding: 0;
+                    .stock-button {
+                      width: 23px;
+                      height: 20px;
+                    }
+                  }
+                }
+                .tags {
+                  float: right;
+                  margin-left: 8px;
+                  width:  calc(100% - 31px);
+                  ul {
+                    .tag {
+                      position: relative;
+                      font-size: 12px;
+                      vertical-align: top;
+                      display: inline;
+                      margin: 0 12px 6px 6px;
+                      padding: 2.4px 7.2px;
+                      background-color: #e0e0e0;
+                      border-top-right-radius: 2px;
+                      border-bottom-right-radius: 2px;
+                      text-decoration: none;
+                      .tag-name {
+                        vertical-align: top;
+                        font-size: 12px;
+                        color: #444;
+                        text-decoration: none;
+                      }
+                    }
+                    .tag::before {
+                      position: absolute;
+                      content: '';
+                      left: -16.78px;
+                      border-top: 8.39px solid transparent;
+                      border-right: 8.39px solid #e0e0e0;
+                      border-bottom: 8.39px solid transparent;
+                      border-left: 8.39px solid transparent;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -223,7 +323,6 @@
   .content-right {
     float: right;
     width: 33%;
-    height: 1000px;
   }
 }
 
