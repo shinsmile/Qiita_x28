@@ -47,8 +47,33 @@
         - if taggings.include?(article.id)
           - articles << article
       .liked-articles
+        - articles.sort! do |a, b|
+          - b[:likes_count] <=> a[:likes_count]
         .top
+          = "いいねされた投稿"
         .contents
+          - articles.each do |article|
+            .article
+              .author-avatar
+                = image_tag "profile.jpg", class:"avatar", alt:""
+              .content
+                .author
+                  %span.author-name
+                    = link_to article.user.name, "/#{article.user.name}", class: "author-name"
+                  %span.date
+                    が
+                    = "#{article.created_at.strftime('%-m月%d日')}"
+                    に投稿
+                .content-title
+                  = link_to article.title, "/articles/#{article.id}", class: "title-text"
+                .stock-and-tags
+                  %span{id: "stock-of-#{article.id}"}
+                    = render partial: 'stock', locals: { article: article }
+                  .tags
+                    %ul
+                      - article.tags.each do |tag|
+                        %li.tag
+                          = link_to tag.name, "/tags/#{tag.name}", class: "tag-name"
       .newest-articles
         - articles.sort! do |a, b|
           - b[:id] <=> a[:id]
