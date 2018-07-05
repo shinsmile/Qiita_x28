@@ -2,28 +2,35 @@
   .allWrapper
     .container1
       .menu-bar
-        .menu-item1
-          トレンド
-          .menu-icon
-            = image_tag "3-trend_icon.png", size: "20×20", alt:"トレンド"
-        .menu-item2
-          タイムライン
+        .menu-items1
+          .menu-icon1
+            = image_tag "3-trend_icon.png", size:"10×10" , alt:"トレンド"
+          .menu-item1
+            .item1-name
+              トレンド
+
+        .menu-items2
           .menu-icon2
-            = image_tag "1-menubar-timeline.png", size: "20×20", alt:"トレンド"
-        .menu-item3
-          タグフィード
+            = image_tag "1-menubar-timeline.png", size:"10×10" , alt: "タイムライン"
+          .menu-item2
+            .item2-name
+              タイムライン
+
+        .menu-items3
           .menu-icon3
-            = image_tag "3-menubar-tag_feed.png", size: "20×20", alt:"トレンド"
+            = image_tag "3-menubar-tag_feed.png", size:"10×10" , alt:"タグフィード"
+          .menu-item3
+            .item3-name
+              タグフィード
 
       .main-view
         .main-item
           .main-header
-            .main-label1
-              タグフィード
-              .main-label2
-
-              .label-icon
-                = image_tag "3-mainview.png", size: "15×15", alt:"トレンド"
+            .main-label-icon1
+              = image_tag "3-mainview.png", class:"trend_view", alt:"trend_view"
+              .main-label1
+                .label-article
+                  タグフィード
 
         .articles
           .my_picture
@@ -107,12 +114,12 @@
             .user-list-content
               .ra-user
                 .ra-user-start
-                  .ra-user-icon
-                    .trophy
-                      = image_tag "!gold!.png", class:"gold", alt:"number_one"
-                      .gold-before
-                  .ra-user-image
-                    = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
+                .ra-user-icon
+                .trophy
+                  = image_tag "!gold!.png", class:"gold", alt:"number_one"
+                  .gold-before
+                .ra-user-image
+                  = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
                   @aaaoi
                 .ra-user-count
@@ -122,12 +129,12 @@
 
               .ra-user
                 .ra-user-start
-                  .ra-user-icon
-                    .trophy
-                      = image_tag "!silvar!.png", class:"silver", alt:"number_two"
-                      .gold-before
-                  .ra-user-image
-                    = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
+                .ra-user-icon
+                .trophy
+                  = image_tag "!silvar!.png", class:"gold", alt:"number_one"
+                  .gold-before
+                .ra-user-image
+                  = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
                   @aaaoi
                 .ra-user-count
@@ -137,12 +144,12 @@
 
               .ra-user
                 .ra-user-start
-                  .ra-user-icon
-                    .trophy
-                      = image_tag "!bronze!.png", class:"bronze", alt:"number_three"
-                      .gold-before
-                  .ra-user-image
-                    = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
+                .ra-user-icon
+                .trophy
+                  = image_tag "!bronze!.png", class:"gold", alt:"number_one"
+                  .gold-before
+                .ra-user-image
+                  = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
                   @aaaoi
                 .ra-user-count
@@ -152,12 +159,12 @@
 
               .ra-user
                 .ra-user-start
-                  .ra-user-icon
-                    .trophy
-                      = image_tag "!4!.png", class:"4", alt:"4"
-                      .gold-before
-                  .ra-user-image
-                    = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
+                .ra-user-icon
+                .trophy
+                  = image_tag "!4!.png", class:"gold", alt:"number_one"
+                  .gold-before
+                .ra-user-image
+                  = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
                   @aaaoi
                 .ra-user-count
@@ -167,13 +174,12 @@
 
               .ra-user
                 .ra-user-start
-                  .ra-user-icon
-                    .trophy
-                      .trophy
-                        = image_tag "!5!.png", class:"5", alt:"5"
-                      .gold-before
-                  .ra-user-image
-                    = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
+                .ra-user-icon
+                .trophy
+                  = image_tag "!5!.png", class:"gold", alt:"number_one"
+                  .gold-before
+                .ra-user-image
+                  = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
                   @aaaoi
                 .ra-user-count
@@ -183,12 +189,12 @@
 
               .ra-user
                 .ra-user-start
-                  .ra-user-icon
-                    .trophy
-                      = image_tag "!6!.png", class:"6", alt:"6"
-                      .gold-before
-                  .ra-user-image
-                    = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
+                .ra-user-icon
+                .trophy
+                  = image_tag "!6!.png", class:"gold", alt:"number_one"
+                  .gold-before
+                .ra-user-image
+                  = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
                   @aaaoi
                 .ra-user-count
@@ -198,12 +204,12 @@
 
               .ra-user
                 .ra-user-start
-                  .ra-user-icon
-                    .trophy
-                      = image_tag "!7!.png", class:"7", alt:"7"
-                      .gold-before
-                  .ra-user-image
-                    = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
+                .ra-user-icon
+                .trophy
+                  = image_tag "!7!.png", class:"gold", alt:"number_one"
+                  .gold-before
+                .ra-user-image
+                  = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
                   @aaaoi
                 .ra-user-count
@@ -213,12 +219,12 @@
 
               .ra-user
                 .ra-user-start
-                  .ra-user-icon
-                    .trophy
-                      = image_tag "!8!.png", class:"8", alt:"8"
-                      .gold-before
-                  .ra-user-image
-                    = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
+                .ra-user-icon
+                .trophy
+                  = image_tag "!8!.png", class:"gold", alt:"number_one"
+                  .gold-before
+                .ra-user-image
+                  = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
                   @aaaoi
                 .ra-user-count
@@ -228,12 +234,12 @@
 
               .ra-user
                 .ra-user-start
-                  .ra-user-icon
-                    .trophy
-                      = image_tag "!9!.png", class:"9", alt:"9"
-                      .gold-before
-                  .ra-user-image
-                    = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
+                .ra-user-icon
+                .trophy
+                  = image_tag "!9!.png", class:"gold", alt:"number_one"
+                  .gold-before
+                .ra-user-image
+                  = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
                   @aaaoi
                 .ra-user-count
@@ -243,19 +249,18 @@
 
               .ra-user
                 .ra-user-start
-                  .ra-user-icon
-                    .trophy
-                      = image_tag "!10!.png", class:"10", alt:"10"
-                  .ra-user-image
-                    = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
+                .ra-user-icon
+                .trophy
+                  = image_tag "!10!.png", class:"gold", alt:"number_one"
+                  .gold-before
+                .ra-user-image
+                  = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
                   @aaaoi
                 .ra-user-count
                   552
                   .ra-user-contrib
                     Contributions
-
-
 
             .container-body-right
               .container-body

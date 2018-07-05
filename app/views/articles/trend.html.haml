@@ -3,36 +3,41 @@
     .container1
       .menu-bar
         .menu-items1
+          //= link_to URL
           .menu-icon1
-            = image_tag "1-menu-bar-trend2.png", size:"10×10" , alt:"トレンド"
+            = image_tag "1-menu-bar-trend2.png" , class:"menu-bar-trend2" , alt:"トレンド"
           .menu-item1
             .item1-name
               トレンド
 
         .menu-items2
+          //= link_to URL
           .menu-icon2
-            = image_tag "1-menubar-timeline.png", size:"10×10" , alt: "タイムライン"
+            = image_tag "1-menubar-timeline.png", class:"menu-bar-timeline" , alt: "タイムライン"
           .menu-item2
             .item2-name
               タイムライン
+              //=link
 
         .menu-items3
+          //= link_to URL
           .menu-icon3
-            = image_tag "1-menu-bar-tag_feed.png", size:"10×10" , alt:"タグフィード"
+            = image_tag "1-menu-bar-tag_feed.png", class:"menu-bar-tag_feed" , alt:"タグフィード"
           .menu-item3
             .item3-name
               タグフィード
+              //=link
 
       .main-view
         .main-item
           .main-header
             .main-label-icon1
-              = image_tag "1-mainview-trend.png", class:"trend_view", alt:"trend_view"
+              = image_tag "1-mainview-trend.png", class:"trend_view1", alt:"trend_view"
               .main-label1
                 .label-article
                   トレンド
                   .main-label2
-                  最近人気の記事を更新
+                    最近人気の記事を更新
               .label-icon3
 
         .articles
@@ -85,7 +90,7 @@
             = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "40x40",  alt:"プロフ画"
           .article
             .article__title
-              ドメインモデルをコードへ落とす 〜あなたのクラスは、どこから？〜
+              ドメインモデルをコードへ落とす 〜クラスは、どこから？
             .article__data
               by emj-naka 2017/10/22
               .goods-icon
@@ -164,7 +169,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!gold!.png", class:"gold", alt:"number_one"
+                  = image_tag "!gold!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
@@ -179,7 +184,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!silvar!.png", class:"gold", alt:"number_one"
+                  = image_tag "!silvar!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
@@ -194,7 +199,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!bronze!.png", class:"gold", alt:"number_one"
+                  = image_tag "!bronze!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
@@ -209,7 +214,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!4!.png", class:"gold", alt:"number_one"
+                  = image_tag "!4!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
@@ -224,7 +229,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!5!.png", class:"gold", alt:"number_one"
+                  = image_tag "!5!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
@@ -239,7 +244,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!6!.png", class:"gold", alt:"number_one"
+                  = image_tag "!6!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
@@ -254,7 +259,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!7!.png", class:"gold", alt:"number_one"
+                  = image_tag "!7!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
@@ -269,7 +274,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!8!.png", class:"gold", alt:"number_one"
+                  = image_tag "!8!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
@@ -284,7 +289,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!9!.png", class:"gold", alt:"number_one"
+                  = image_tag "!9!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
@@ -299,7 +304,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!10!.png", class:"gold", alt:"number_one"
+                  = image_tag "!10!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
