@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get '/articles/stocks', to: 'articles#stocks'
   resources :articles do
-    resources :stocks, only: [:create, :destroy, :update]
+    resources :stocks, only: [:create, :update, :destroy]
     resources :likes, only: [:create, :destroy]
   end
   resources :users

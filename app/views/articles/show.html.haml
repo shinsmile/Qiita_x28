@@ -5,8 +5,8 @@
       #item.stick_Menu
         %span.thumbs_icon{ id: "like-of-#{@article.id}"}
           = render partial: 'likes/like', locals: { article: @article, likes: @likes }
-        %span.folder_icon{ id: "stocks-of-#{@stock.id}"}
-          = render partial: 'stocks/show', locals: { article: @article, stocks: @stocks }
+        %span.folder_icon{ id: "stocks-of-#{@article.id}"}
+          = render partial: 'stocks/show', locals: { article: @article }
         %span#small_twitter
           %a.fab.fa-twitter{:href => "https://twitter.com/intent/tweet"}
         %span#small_facebook
@@ -49,7 +49,7 @@
             .show_footer_social
               %span.fa-stack#twitter
                 %i.fab.fa-twitter
-                %a.tweet{:href => "https://twitter.com/intent/tweet"}
+                %a.tweet
                   tweet
               %span.fa-stack#bold
                 %i.fas.fa-bold

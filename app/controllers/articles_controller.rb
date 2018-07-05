@@ -20,7 +20,6 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    @stock = Stock.find(params[:id])
   end
 
   def stocks
@@ -41,3 +40,5 @@ class ArticlesController < ApplicationController
   end
 
 end
+
+    # @stock = Stock.create(user_id: current_user.id, article_id: params[:article_id], is_stocked: 1)

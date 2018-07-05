@@ -199,6 +199,10 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                .tweet {
+                  color: white;
+                  text-decoration: none;
+                }
               }
               #bold {
                 margin-right: 8px;
