@@ -105,6 +105,7 @@
     .articles {
       .liked-articles {
         float: left;
+        width: 100%;
         .top {
           padding-top: 20px;
           font-size: 16px;
@@ -213,6 +214,7 @@
 
       .newest-articles {
         float: left;
+        width: 100%;
         .top {
           padding-top: 20px;
           font-size: 16px;
