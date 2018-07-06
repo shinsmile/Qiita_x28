@@ -55,3 +55,5 @@ class ArticlesController < ApplicationController
   end
 
 end
+
+    # @stock = Stock.create(user_id: current_user.id, article_id: params[:article_id], is_stocked: 1)

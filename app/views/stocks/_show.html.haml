@@ -1,0 +1,9 @@
+- if article.stock_user(current_user.id)
+  = button_to article_stock_path(article_id: @article.id), method: :delete, class: "folder-button", remote: true do
+    %span.fa-2x#folder.fa-stack
+      %i.fas.fa-folder.fa-stack-2x
+        %i.fas.fa-check.fa-stack-1x
+- else
+  = button_to article_stocks_path(article_id: @article.id), method: :create, class: "folder-button", remote: true do
+    %span.fa-2x#folder
+      %i.fas.fa-folder-open

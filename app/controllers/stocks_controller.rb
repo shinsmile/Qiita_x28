@@ -1,5 +1,5 @@
 class StocksController < ApplicationController
-  before_action :set_stock, only: [:create, :update]
+  before_action :set_stock, only: [:create, :destroy, :update]
 
   def create
     @stock = Stock.create(user_id: current_user.id, article_id: params[:article_id], is_stocked: 1)

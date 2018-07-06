@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   get '/articles/stocks', to: 'articles#stocks'
   get '/articles/stocks_search', to: 'articles#stocks_search'
   resources :articles do
-    resources :stocks
-    resources :likes, only:[:create, :destroy]
+    resources :stocks, only: [:create, :update, :destroy]
+    resources :likes, only: [:create, :destroy]
   end
   resources :users
   resources :tags
