@@ -26,12 +26,27 @@ class ArticlesController < ApplicationController
     @stocks = Stock.where(user_id: current_user.id, is_stocked: 1)
   end
 
+  def stocks_search
+    query = params[:q].values
+    @query = query[0]
+    @q = Article.ransack(params[:q])
+    @articles = @q.result
+  end
+
+  def search
+    query = params[:q].values
+    @query = query[0]
+    @q = Article.ransack(params[:q])
+    @articles = @q.result
+  end
+
   private
   def article_params
     params.require(:article).permit(
       :user_id,
       :title,
-      :body
+      :body,
+      :likes_count
     ).merge(tag_list: params[:article][:tag])
   end
 
