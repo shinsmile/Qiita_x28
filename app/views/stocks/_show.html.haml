@@ -1,5 +1,10 @@
-- if article.stock_user(current_user.id)
-  = button_to article_stock_path(article_id: @article.id), method: :delete, class: "folder-button", remote: true do
+- stocks = []
+- for stock in article.stocks
+  - if stock.user_id == current_user.id
+    - stocks << stock.id
+    - id = stock.id
+- if stocks.length > 0
+  = button_to article_stock_path(id: id, article_id: @article.id), method: :delete, class: "folder-button", remote: true do
     %span.fa-2x#folder.fa-stack
       %i.fas.fa-folder.fa-stack-2x
         %i.fas.fa-check.fa-stack-1x
