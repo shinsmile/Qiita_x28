@@ -1,33 +1,26 @@
 class UsersController < ApplicationController
-  layout 'main'
 
-  def index
+  layout "main"
+
+  before_action :move_to_session, except: :index
+
+  def update
+    @user = current_user
+    @user.update(user_params)
+    @tags = params[:tag]
+    @tag = params[:this_tag]
   end
 
-  def new
-    @user = User.new
+  def user_params
+    params.permit(
+      :name,
+      :email
+    ).merge(tag_list: params[:tag])
   end
 
-  def show
-    @user = User.find(params[:id])
-  end
+  def move_to_session
+    redirect_to "/users/sign_in" unless user_signed_in?
 
-
-
-
-
-# 以下like private commentpageはviewを呼ぶアクション
-# 記述が効率悪い？
-  def like
-   @user = User.find(params[:id])
-  end
-
-  def private
-   @user = User.find(params[:id])
-  end
-
-  def commentpage
-   @user = User.find(params[:id])
   end
 
 end

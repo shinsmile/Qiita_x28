@@ -1,6 +1,7 @@
 .article-new
   = form_for @article do |f|
     = f.hidden_field :user_id, value: current_user.id
+    = f.hidden_field :likes_count, value: 0
     .article-new-title
       = f.text_field :title, required: true, autofocus: true, placeholder: "タイトル"
     .article-new-tag
@@ -17,5 +18,3 @@
 
     .save-btn
       = f.submit "Qiitaに投稿", class: 'post_btn'
-
-      = link_to 'Logout', destroy_user_session_path, method: :delete
