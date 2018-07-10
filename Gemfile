@@ -39,12 +39,14 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
 
 gem "acts_as_follower"
-gem 'github-linguist'
-gem 'qiita-markdown'
+gem 'github-linguist', '~> 4.0'
+gem 'gemoji', '~> 2.0'
+gem 'qiita-markdown', '~>0.26.0'
 gem 'acts-as-taggable-on'
 gem 'erb2haml'
 gem 'jquery-rails'
 gem 'ransack'
+gem 'bootstrap-sass', '~> 3.3.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

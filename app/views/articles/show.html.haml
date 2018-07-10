@@ -25,13 +25,12 @@
               .show_header_info__meta
                 %i.fab.fa-ellipsis-h.fa#icon
             %h1.title
-              / = @articles.title
+              = @article.title
             #Tags
               %a.tags_item
                 tags
           .content
-            / = @articles.body
-            記事
+            = qiita_markdown(simple_format(@article.body))
           .show_footer
             .show_footer_menu
               %span.fa-stack#plane
