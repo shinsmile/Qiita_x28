@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   layout "main"
 
   before_action :move_to_session, except: :index
@@ -19,6 +20,7 @@ class UsersController < ApplicationController
 
   def move_to_session
     redirect_to "/users/sign_in" unless user_signed_in?
+
   end
 
 end

@@ -1,0 +1,78 @@
+.mypage-container
+  .container-body
+    .container-body-left
+      .profile
+        .profile__avatar
+          = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "270x270",  alt:"プロフ画"
+        .profile__my-name
+          .full-name
+            = @user.name
+          .id-name
+            @tepepe
+        .profile__my-edit
+          プロフィール編集
+        .profile__tags-info
+          .tag-header
+            フォロー中のタグ
+          %ul
+            %li
+              Ruby
+            %li
+              Java
+            %li
+              ポエム
+        .profile__user-info
+          .user-header
+            フォロー中のユーザー
+          %ul
+            %li
+              = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "20x21",  alt:"プロフ画"
+        .profile__people-info
+          .people-header
+            知り合いかも
+          %ul
+            %li
+              = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "20x21",  alt:"プロフ画"
+    .container-body-right
+      .chart
+      .chart-tab
+        %ul
+          %li
+            .count
+              2
+            .count-title
+              Items
+          %li
+            .count
+              0
+            .count-title
+              Contribution
+          %li
+            .count
+              0
+            .count-title
+              Followers
+      / = render 'users/recent-articles'
+      .article-tab-comment
+        %ul
+          %li
+            = link_to '最近の投稿', user_path, method: :get
+          %li
+            = link_to  'いいねした投稿', like_user_path, method: :get
+          %li
+            = link_to '限定共有投', private_user_path, method: :get
+          %li--comment
+            = link_to 'コメント', commentpage_user_path, method: :get
+      .articles
+        .my_picture
+          = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "48x48",  alt:"プロフ画"
+        .article
+          .article__data
+            zk_phiの投稿治安の悪い Slack Emoji を作るツールを作ったにコメント2018/06/29 16:47
+          .article__title
+            すばらしい！
+
+
+
+
+
