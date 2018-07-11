@@ -21,4 +21,6 @@ class User < ApplicationRecord
   acts_as_taggable
   acts_as_taggable_on :articles
 
+  mount_uploader :image, ImageUploader
+
 end

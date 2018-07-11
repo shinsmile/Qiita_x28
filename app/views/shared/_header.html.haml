@@ -44,9 +44,13 @@
             %details
               %summary
                 .user_arrow
-                = image_tag "profile.jpg", class: "profile_picture", size: "32x32"
+                - if current_user.image != "/uploads/user/image/#{current_user.id}/no-image"
+                  = image_tag "no-image.png", class: "profile_picture", alt:""
+                - else
+                  = image_tag "#{current_user.image}", class: "profile_picture", alt:"プロフ画"
               %ul
                 .mypage
+                  = link_to "", user_path(id: current_user.id)
                 .hr
                 .draft
                 .request

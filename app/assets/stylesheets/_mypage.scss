@@ -1,6 +1,7 @@
 .mypage-container{
   height: 1000px;
   width: 100%;
+  min-width: 1154px;
   line-height: 1.42857;
     .container-body{
       height: 100%;
@@ -15,6 +16,10 @@
             .profile{
               &__avatar{
                 margin-bottom: 20px;
+                .avatar {
+                  height: 230px;
+                  width: 230px;
+                }
               }
               &__my-name{
                 margin-bottom: 10px;
@@ -105,7 +110,6 @@
           width: 75%;
           float: right;
             .chart{
-              background-color: pink;
               height: 270px;
               width: 100%;
             }

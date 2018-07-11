@@ -11,7 +11,11 @@ Rails.application.routes.draw do
     resources :stocks, only: [:create, :update, :destroy]
     resources :likes, only: [:create, :destroy]
   end
-  resources :users
+  resources :users do
+    get '/like', to: 'users#like'
+    get '/private', to: 'users#private'
+    get '/commentpage', to: 'users#commentpage'
+  end
   resources :tags
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
