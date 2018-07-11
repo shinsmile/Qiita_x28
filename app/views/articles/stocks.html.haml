@@ -14,7 +14,7 @@
     - @stocks.each do |stock|
       .article-left
         .author-avatar
-          - if stock.article.user.image != "/uploads/user/image/#{current_user.id}/no-image"
+          - if stock.article.user.image.blank?
             = image_tag "no-image.png", class: "avatar", alt:""
           - else
             = image_tag "#{current_user.image}", class: "avatar", alt:"プロフ画"

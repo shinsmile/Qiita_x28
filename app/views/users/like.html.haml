@@ -3,43 +3,37 @@
     .container-body-left
       .profile
         .profile__avatar
-          = image_tag "#{@user.image}", class: "avatar", alt:"プロフ画"
+          - if @user.image.blank?
+            = image_tag "no-image.png", class: "avatar", alt:""
+          - else
+            = image_tag "#{current_user.image}", class: "avatar", alt:"プロフ画"
+          .profile__update
         .profile__my-name
           .full-name
             = @user.name
-          .id-name
-            @tepepe
-        .profile__my-edit
-          プロフィール編集
         .profile__tags-info
           .tag-header
             フォロー中のタグ
+            - tags = []
+            - for tagging in current_user.taggings
+              - tags << tagging.tag.name
           %ul
-            %li
-              Ruby
-            %li
-              Java
-            %li
-              ポエム
-        .profile__user-info
-          .user-header
-            フォロー中のユーザー
-          %ul
-            %li
-              = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "20x21",  alt:"プロフ画"
-        .profile__people-info
-          .people-header
-            知り合いかも
-          %ul
-            %li
-              = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "20x21",  alt:"プロフ画"
+            - tags.each do |tag|
+              %li
+                = tag
+
     .container-body-right
       .chart
       .chart-tab
         %ul
           %li
             .count
-              2
+              - count = []
+              - for article in @articles
+                - if article.user == @user
+                  - count << article.id
+                  - number = count.length
+              = number
             .count-title
               Items
           %li
@@ -55,7 +49,7 @@
       .article-tab-like
         %ul
           %li
-            = link_to '最近の投稿', user_path(id: @id), method: :get
+            = link_to '投稿一覧', user_path(id: @id), method: :get
           %li--like
             = link_to  'いいねした投稿', user_like_path(user_id: @id), method: :get
           %li
@@ -63,33 +57,33 @@
           %li
             = link_to 'コメント', user_commentpage_path(user_id: @id), method: :get
       .articles
-        .my_picture
-          = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "48x48",  alt:"プロフ画"
-        .article
-          .article__data
-            emj-nakaが2017/10/22に投稿
-          .article__title
-            rubyの::について
-          .article__tags
-            %ul
-              %li
-                Ruby
-              %li
-                Ruby
-              %li
-                Ruby
-      .articles
-        .my_picture
-          = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "48x48",  alt:"プロフ画"
-        .article
-          .article__data
-            emj-nakaが2017/10/22に投稿
-          .article__title
-            rubyの::について
-          .article__tags
-            %ul
-              %li
-                Ruby
+        - @articles.each do |article|
+          - article.likes.each do |like|
+            - if like.user_id == @user.id
+              .article_area
+                .my_picture
+                  - if article.user.image.blank?
+                    = image_tag "no-image.png", size: "48x48", alt:""
+                  - else
+                    = image_tag "#{current_user.image}", size: "48x48", alt:"プロフ画"
+                .article
+                  .article__data
+                    %span.author-name
+                      = link_to article.user.name, "/#{article.user.name}", class: "author-name"
+                    %span.date
+                      が
+                      = "#{article.created_at.strftime('%-m月%d日')}"
+                      に投稿
+                  .article__title
+                    = link_to article.title, "/articles/#{article.id}", class: "title-text"
+                  .article__tags
+                    %ul
+                    - article.tags.each do |tag|
+                      %li
+                        = link_to tag.name, "/tags/#{tag.name}", class: "tag-name"
+
+
+
 
 
 
