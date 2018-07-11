@@ -41,6 +41,9 @@
       float: left;
       margin-right: 10px;
       cursor: pointer;
+      .author-avatar {
+      border-radius: .2em;
+      }
     }
     .article{
       float: right;
