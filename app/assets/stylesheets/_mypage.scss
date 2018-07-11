@@ -1,3 +1,14 @@
+
+.no_line_color_blue {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.no_line_color_gray {
+  color: #444;
+  text-decoration: none;
+}
+
 .mypage-container{
   height: 1000px;
   width: 100%;
@@ -19,6 +30,7 @@
                 .avatar {
                   height: 230px;
                   width: 230px;
+                  border-radius: 6px;
                 }
               }
               &__my-name{
