@@ -3,7 +3,7 @@
     .container-body-left
       .profile
         .profile__avatar
-          = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "270x270",  alt:"プロフ画"
+          = image_tag "#{@user.image}", class: "avatar", alt:"プロフ画"
         .profile__my-name
           .full-name
             = @user.name
@@ -56,13 +56,13 @@
       .article-tab-onlypage
         %ul
           %li
-            = link_to '最近の投稿', user_path, method: :get
+            = link_to '最近の投稿', user_path(id: @id), method: :get
           %li
-            = link_to  'いいねした投稿', like_user_path, method: :get
+            = link_to  'いいねした投稿', user_like_path(user_id: @id), method: :get
           %li--onlypage
-            = link_to '限定共有投', private_user_path, method: :get
+            = link_to '限定共有投', user_private_path(user_id: @id), method: :get
           %li
-            = link_to 'コメント', commentpage_user_path, method: :get
+            = link_to 'コメント', user_commentpage_path(user_id: @id), method: :get
       .articles
         .my_picture
           = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "48x48",  alt:"プロフ画"

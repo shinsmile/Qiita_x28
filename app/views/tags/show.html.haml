@@ -53,9 +53,12 @@
           = "いいねされた投稿"
         .contents
           - articles.each do |article|
-            .article
+            .article-tag
               .author-avatar
-                = image_tag "profile.jpg", class:"avatar", alt:""
+                - if article.user.image != "/uploads/user/image/#{current_user.id}/no-image"
+                  = image_tag "no-image.png", class: "avatar", alt:""
+                - else
+                  = image_tag "#{current_user.image}", class: "avatar", alt:"プロフ画"
               .content
                 .author
                   %span.author-name
@@ -81,9 +84,12 @@
           = "新着投稿"
         .contents
           - articles.each do |article|
-            .article
+            .article-tag
               .author-avatar
-                = image_tag "profile.jpg", class:"avatar", alt:""
+                - if article.user.image != "/uploads/user/image/#{current_user.id}/no-image"
+                  = image_tag "no-image.png", class: "avatar", alt:""
+                - else
+                  = image_tag "#{current_user.image}", class: "avatar", alt:"プロフ画"
               .content
                 .author
                   %span.author-name
