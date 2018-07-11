@@ -49,10 +49,10 @@
       .article-tab-onlypage
         %ul
           %li
-            = link_to '投稿一覧', user_path(id: @id), method: :get
+            = link_to '投稿一覧', user_path(id: @id), method: :get, class: "no_line_color_blue"
           %li
-            = link_to  'いいねした投稿', user_like_path(user_id: @id), method: :get
+            = link_to  'いいねした投稿', user_like_path(user_id: @id), method: :get, class: "no_line_color_blue"
           %li--onlypage
-            = link_to '限定共有投', user_private_path(user_id: @id), method: :get
+            = link_to '限定共有投稿', user_private_path(user_id: @id), method: :get, class: "no_line_color_blue"
           %li
-            = link_to 'コメント', user_commentpage_path(user_id: @id), method: :get
+            = link_to 'コメント', user_commentpage_path(user_id: @id), method: :get, class: "no_line_color_blue"
