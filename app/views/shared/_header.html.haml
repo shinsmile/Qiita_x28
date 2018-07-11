@@ -44,7 +44,7 @@
             %details
               %summary
                 .user_arrow
-                - if current_user.image != "/uploads/user/image/#{current_user.id}/no-image"
+                - if current_user.image.blank?
                   = image_tag "no-image.png", class: "profile_picture", alt:""
                 - else
                   = image_tag "#{current_user.image}", class: "profile_picture", alt:"プロフ画"

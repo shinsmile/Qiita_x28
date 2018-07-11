@@ -7,21 +7,25 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @id = @user.id
+    @articles = Article.all
   end
 
   def like
     @user = User.find(params[:user_id])
     @id = @user.id
+    @articles = Article.all
   end
 
   def private
     @user = User.find(params[:user_id])
     @id = @user.id
+    @articles = Article.all
   end
 
   def commentpage
     @user = User.find(params[:user_id])
     @id = @user.id
+    @articles = Article.all
   end
 
   def update
