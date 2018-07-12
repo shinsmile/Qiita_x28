@@ -33,7 +33,10 @@
                 - if article.user == @user
                   - count << article.id
                   - number = count.length
-              = number
+              - if number.blank?
+                =0
+              - else
+                = number
             .count-title
               Items
           %li
