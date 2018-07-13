@@ -74,7 +74,7 @@
                 - if article.user.image.blank?
                   = image_tag "no-image.png", size: "48x48", alt:"", class: "author-avatar"
                 - else
-                  = image_tag "#{current_user.image}", size: "48x48", alt:"プロフ画", class: "author-avatar"
+                  = image_tag "#{article.user.image}", size: "48x48", alt:"プロフ画", class: "author-avatar"
               .article
                 .article__data
                   %span.author-name

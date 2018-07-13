@@ -29,7 +29,7 @@
             - if article.user.image.blank?
               = image_tag "no-image.png", class: "avatar", alt:""
             - else
-              = image_tag "#{current_user.image}", class: "avatar", alt:"プロフ画"
+              = image_tag "#{article.user.image}", class: "avatar", alt:"プロフ画"
           .content
             .author
               %span.author-name
