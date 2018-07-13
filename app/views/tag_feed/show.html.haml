@@ -4,24 +4,24 @@
       .menu-bar
         .menu-items1
           .menu-icon1
-            = image_tag "3-trend_icon.png", size:"10×10" , alt:"トレンド"
+            = image_tag "3-trend_icon.png", class:"trend_icon3" , alt:"トレンド"
           .menu-item1
             .item1-name
-              トレンド
+              = link_to("トレンド", trend_path, class: 'articles_font')
 
         .menu-items2
           .menu-icon2
-            = image_tag "1-menubar-timeline.png", size:"10×10" , alt: "タイムライン"
+            = image_tag "1-menubar-timeline.png", class:"menubar-timeline" , alt: "タイムライン"
           .menu-item2
             .item2-name
-              タイムライン
+              = link_to("タイムライン", timeline_path, class: 'articles_font')
 
         .menu-items3
           .menu-icon3
-            = image_tag "3-menubar-tag_feed.png", size:"10×10" , alt:"タグフィード"
+            = image_tag "3-menubar-tag_feed.png", class:"menu-bar-tag_feed3" , alt:"タグフィード"
           .menu-item3
             .item3-name
-              タグフィード
+              = link_to("タグフィード", tag_feed_path, class: 'articles_font')
 
       .main-view
         .main-item
@@ -39,10 +39,11 @@
             .article__tags
               pythonに新しい投稿がありました
             .article__title
-              Vue CLI UIが想像以上に便利だった話
+              wxPythonを使ってみる (6)
+
+
             .article__data
               by emj-naka
-
         .articles
           .my_picture
             = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "40x40",  alt:"プロフ画"
@@ -116,7 +117,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!gold!.png", class:"gold", alt:"number_one"
+                  = image_tag "!gold!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
@@ -131,7 +132,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!silvar!.png", class:"gold", alt:"number_one"
+                  = image_tag "!silvar!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
@@ -146,7 +147,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!bronze!.png", class:"gold", alt:"number_one"
+                  = image_tag "!bronze!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
@@ -161,7 +162,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!4!.png", class:"gold", alt:"number_one"
+                  = image_tag "!4!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
@@ -176,7 +177,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!5!.png", class:"gold", alt:"number_one"
+                  = image_tag "!5!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
@@ -191,7 +192,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!6!.png", class:"gold", alt:"number_one"
+                  = image_tag "!6!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
@@ -206,7 +207,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!7!.png", class:"gold", alt:"number_one"
+                  = image_tag "!7!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
@@ -221,7 +222,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!8!.png", class:"gold", alt:"number_one"
+                  = image_tag "!8!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
@@ -236,7 +237,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!9!.png", class:"gold", alt:"number_one"
+                  = image_tag "!9!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
@@ -251,7 +252,7 @@
                 .ra-user-start
                 .ra-user-icon
                 .trophy
-                  = image_tag "!10!.png", class:"gold", alt:"number_one"
+                  = image_tag "!10!.png", class:"rank", alt:"number_one"
                   .gold-before
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"

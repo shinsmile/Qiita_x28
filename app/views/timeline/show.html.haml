@@ -3,21 +3,19 @@
     .container1
       .menu-bar
         .menu-items1
-          //= link_to URL
           .menu-icon1
             = image_tag "3-trend_icon.png", class:"trend_icon1" , alt:"トレンド"
           .menu-item1
             .item1-name
-              トレンド
+              = link_to("トレンド", trend_path, class: 'articles_font')
               //=link
-
         .menu-items2
           //= link_to URL
           .menu-icon2
             = image_tag "2-menubar-timeline.png",  class:"trend_icon1" , alt: "タイムライン"
           .menu-item2
             .item2-name
-              タイムライン
+              = link_to("タイムライン", timeline_path, class: 'articles_font')
 
         .menu-items3
           //= link_to URL
@@ -25,7 +23,7 @@
             = image_tag "1-menu-bar-tag_feed.png", class:"trend_icon1" , alt:"タグフィード"
           .menu-item3
             .item3-name
-              タグフィード
+              = link_to("タグフィード", tag_feed_path, class: 'articles_font')
       .main-view
         .main-item
           .main-header
