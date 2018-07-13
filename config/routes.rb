@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
   root 'articles#index'
 
+  get 'trend' => 'trend#show'
+  get 'timeline' => 'timeline#show'
+  get 'tag_feed' => 'tag_feed#show'
   get '/application/search', to: 'application#search'
   get '/articles/search', to: 'articles#search'
   get '/articles/stocks', to: 'articles#stocks'
