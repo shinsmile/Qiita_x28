@@ -1,4 +1,3 @@
-
 .trend
   .allWrapper
     .container1
@@ -9,7 +8,7 @@
             = image_tag "1-menu-bar-trend2.png" , class:"menu-bar-trend2" , alt:"トレンド"
           .menu-item1
             .item1-name
-              = link_to("トレンド", trend_path, class: 'articles_font')
+              = link_to("トレンド", trend_path, class: 'articles_font_trend')
 
         .menu-items2
           //= link_to URL
@@ -17,7 +16,7 @@
             = image_tag "1-menubar-timeline.png", class:"menu-bar-timeline" , alt: "タイムライン"
           .menu-item2
             .item2-name
-              = link_to("タイムライン", timeline_path, class: 'articles_font')
+              = link_to("タイムライン", timeline_path, class: 'articles_font_timeline')
               //=link
         .menu-items3
           //= link_to URL
@@ -25,7 +24,7 @@
             = image_tag "1-menu-bar-tag_feed.png", class:"menu-bar-tag_feed" , alt:"タグフィード"
           .menu-item3
             .item3-name
-              = link_to("タグフィード", tag_feed_path, class: 'articles_font')
+              = link_to("タグフィード", tag_feed_path, class: 'articles_font_tag-feed')
               //=link
       .main-view
         .main-item
@@ -39,116 +38,25 @@
                     最近人気の記事を更新
               .label-icon3
 
-        .articles
-          .my_picture
-            = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "40x40",  alt:"プロフ画"
-          .article
-            .article__title
-              画像認識で「綾鷹を選ばせる」AIを作る
-            .article__data
-              by emj-naka 2017/10/22
-              .goods-icon
-                = image_tag "!goods_mark!.png", class:"goods", alt:"goods_icon"
+        - @article.each do |article|
+          .articles
+            .my_picture
+              = image_tag "profile.jpg", class:"avatar", alt:""
+            .article
+              .article__title
+                = link_to article.title, "/articles/#{article.id}", class: "title-text"
+              .article__data
+                %span.author-name
+                by
+                = link_to article.user.name, "/#{article.user.name}", class: "author-name"
 
-        .articles
-          .my_picture
-            = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "40x40",  alt:"プロフ画"
-          .article
-            .article__title
-              画像認識で「綾鷹を選ばせる」AIを作る
-            .article__data
-              by emj-naka 2017/10/22
-              .goods-icon
-                = image_tag "!goods_mark!.png", class:"goods", alt:"goods_icon"
-
-        .articles
-          .my_picture
-            = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "40x40",  alt:"プロフ画"
-          .article
-            .article__title
-              ブロックチェーンにまつわる7つの『不都合な真実』
-            .article__data
-              by emj-naka 2017/10/22
-              .goods-icon
-                = image_tag "!goods_mark!.png", class:"goods", alt:"goods_icon"
-
-        .articles
-          .my_picture
-            = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "40x40",  alt:"プロフ画"
-          .article
-            .article__title
-              Dockerfile のベストプラクティスを自分なりに整理してみた
-            .article__data
-              by emj-naka 2017/10/22
-              .goods-icon
-                = image_tag "!goods_mark!.png", class:"goods", alt:"goods_icon"
+                %span.date
+                = "#{article.created_at.strftime('%-m月%d日')}"
+                に投稿
+                .goods-icon
+                  = image_tag "!goods_mark!.png", class:"goods", alt:"goods_icon"
 
 
-        .articles
-          .my_picture
-            = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "40x40",  alt:"プロフ画"
-          .article
-            .article__title
-              ドメインモデルをコードへ落とす 〜クラスは、どこから？
-            .article__data
-              by emj-naka 2017/10/22
-              .goods-icon
-                = image_tag "!goods_mark!.png", class:"goods", alt:"goods_icon"
-
-        .articles
-          .my_picture
-            = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "40x40",  alt:"プロフ画"
-          .article
-            .article__title
-              【深層強化学習】『2018年最強手法(?)』Ape-X 実装・解説
-            .article__data
-              by emj-naka 2017/10/22
-              .goods-icon
-                = image_tag "!goods_mark!.png", class:"goods", alt:"goods_icon"
-
-        .articles
-          .my_picture
-            = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "40x40",  alt:"プロフ画"
-          .article
-            .article__title
-              【深層強化学習】『2018年最強手法(?)』Ape-X 実装・解説
-            .article__data
-              by emj-naka 2017/10/22
-              .goods-icon
-                = image_tag "!goods_mark!.png", class:"goods", alt:"goods_icon"
-
-        .articles
-          .my_picture
-            = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "40x40",  alt:"プロフ画"
-          .article
-            .article__title
-              【深層強化学習】『2018年最強手法(?)』Ape-X 実装・解説
-            .article__data
-              by emj-naka 2017/10/22
-              .goods-icon
-                = image_tag "!goods_mark!.png", class:"goods", alt:"goods_icon"
-
-        .articles
-          .my_picture
-            = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "40x40",  alt:"プロフ画"
-          .article
-            .article__title
-              【深層強化学習】『2018年最強手法(?)』Ape-X 実装・解説
-            .article__data
-              by emj-naka 2017/10/22
-              .goods-icon
-                = image_tag "!goods_mark!.png", class:"goods", alt:"goods_icon"
-
-        .articles
-          .my_picture
-            = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "40x40",  alt:"プロフ画"
-          .article
-            .article__title
-              【深層強化学習】『2018年最強手法(?)』Ape-X 実装・解説
-            .article__data
-              by emj-naka 2017/10/22
-              .goods-icon
-                = image_tag "!goods_mark!.png", class:"goods", alt:"goods_icon"
 
       .a-side
         .p-home_ad
@@ -173,7 +81,7 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @shotyan
                 .ra-user-count
                   552
                   .ra-user-contrib
@@ -188,9 +96,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @hihiman
                 .ra-user-count
-                  552
+                  530
                   .ra-user-contrib
                     Contributions
 
@@ -203,9 +111,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @nauhodo
                 .ra-user-count
-                  552
+                  514
                   .ra-user-contrib
                     Contributions
 
@@ -218,9 +126,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @gannzi-
                 .ra-user-count
-                  552
+                  423
                   .ra-user-contrib
                     Contributions
 
@@ -233,9 +141,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @akebono
                 .ra-user-count
-                  552
+                  333
                   .ra-user-contrib
                     Contributions
 
@@ -248,9 +156,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @coffee2
                 .ra-user-count
-                  552
+                  320
                   .ra-user-contrib
                     Contributions
 
@@ -263,9 +171,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @banana3
                 .ra-user-count
-                  552
+                  309
                   .ra-user-contrib
                     Contributions
 
@@ -278,9 +186,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @sos_man
                 .ra-user-count
-                  552
+                  209
                   .ra-user-contrib
                     Contributions
 
@@ -293,9 +201,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @yarima9
                 .ra-user-count
-                  552
+                  190
                   .ra-user-contrib
                     Contributions
 
@@ -308,9 +216,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @aa-chan
                 .ra-user-count
-                  552
+                  140
                   .ra-user-contrib
                     Contributions
 

@@ -56,31 +56,31 @@
             border: 1px solid #ddd;
             border-radius: 3px;
             box-shadow: 0 0 8px 0 rgba(0,0,0,.15);
-              .trend {
+              .articles_trend {
                 height: 41px;
                 width: 198px;
                 background-image: url(trend_off.png);
                 background-size: 198px 41px;
               }
-              .trend:hover {
+              .articles_trend:hover {
                 background-image: url(trend_on.png);
               }
-              .timeline {
+              .articles_timeline {
                 height: 41px;
                 width: 198px;
                 background-image: url(timeline_off.png);
                 background-size: 198px 41px;
               }
-              .timeline:hover {
+              .articles_timeline:hover {
                 background-image: url(timeline_on.png);
               }
-              .tag-feed {
+              .articles_tag-feed {
                 height: 41px;
                 width: 198px;
                 background-image: url(tag_feed_off.png);
                 background-size: 198px 41px;
               }
-              .tag-feed:hover {
+              .articles_tag-feed:hover {
                 background-image: url(tag_feed_on.png);
               }
             }

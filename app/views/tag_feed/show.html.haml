@@ -7,21 +7,21 @@
             = image_tag "3-trend_icon.png", class:"trend_icon3" , alt:"トレンド"
           .menu-item1
             .item1-name
-              = link_to("トレンド", trend_path, class: 'articles_font')
+              = link_to("トレンド", trend_path, class: 'articles_font_trend3')
 
         .menu-items2
           .menu-icon2
             = image_tag "1-menubar-timeline.png", class:"menubar-timeline" , alt: "タイムライン"
           .menu-item2
             .item2-name
-              = link_to("タイムライン", timeline_path, class: 'articles_font')
+              = link_to("タイムライン", timeline_path, class: 'articles_font_timeline3')
 
         .menu-items3
           .menu-icon3
             = image_tag "3-menubar-tag_feed.png", class:"menu-bar-tag_feed3" , alt:"タグフィード"
           .menu-item3
             .item3-name
-              = link_to("タグフィード", tag_feed_path, class: 'articles_font')
+              = link_to("タグフィード", tag_feed_path, class: 'articles_font_tag-feed3')
 
       .main-view
         .main-item
@@ -31,73 +31,22 @@
               .main-label1
                 .label-article
                   タグフィード
-
-        .articles
-          .my_picture
-            = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "40x40",  alt:"プロフ画"
-          .article
-            .article__tags
-              pythonに新しい投稿がありました
-            .article__title
-              wxPythonを使ってみる (6)
-
-
-            .article__data
-              by emj-naka
-        .articles
-          .my_picture
-            = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "40x40",  alt:"プロフ画"
-          .article
-            .article__tags
-              pythonに新しい投稿がありました
-            .article__title
-              Seleniumを使ってGoogleの検索結果をたくさん取得する
-            .article__data
-              by emj-naka
-
-        .articles
-          .my_picture
-            = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "40x40",  alt:"プロフ画"
-          .article
-            .article__tags
-              pythonに新しい投稿がありました
-            .article__title
-              DjangoでTwitter認証[2018/06最新版]
-            .article__data
-              by emj-naka
-
-        .articles
-          .my_picture
-            = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "40x40",  alt:"プロフ画"
-          .article
-            .article__tags
-              pythonに新しい投稿がありました
-            .article__title
-              Python bitly URL短縮
-            .article__data
-              by emj-naka
-
-        .articles
-          .my_picture
-            = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "40x40",  alt:"プロフ画"
-          .article
-            .article__tags
-              pythonに新しい投稿がありました
-            .article__title
-              Python Twitterに画像を投稿
-            .article__data
-              by emj-naka
-
-        .articles
-          .my_picture
-            = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "40x40",  alt:"プロフ画"
-          .article
-            .article__tags
-              pythonに新しい投稿がありました
-            .article__title
-              カテゴリカル変数のMean_Encodeをやってみた
-            .article__data
-              by emj-naka
+        - @article.each do |article|
+          .articles
+            .picture
+              /= image_tag "python_tag.png", class:"python_tags", alt:""
+            .article
+              .article__tags
+                %ul
+                  - article.tags.each do |tag|
+                    %li.tag
+                      ●
+                      = link_to tag.name, "/tags/#{tag.name}", class: "tag-link"
+              .article__title
+                = link_to article.title, "/articles/#{article.id}", class: "title-text"
+              .article__data
+                = image_tag "profile.jpg", class:"avatar_tag-feed", alt:""
+                = link_to article.user.name, "/#{article.user.name}", class: "author-name"
 
       .a-side
         .p-home_ad
@@ -122,7 +71,7 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @shotyan
                 .ra-user-count
                   552
                   .ra-user-contrib
@@ -137,9 +86,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @hihiman
                 .ra-user-count
-                  552
+                  530
                   .ra-user-contrib
                     Contributions
 
@@ -152,9 +101,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @nauhodo
                 .ra-user-count
-                  552
+                  514
                   .ra-user-contrib
                     Contributions
 
@@ -167,9 +116,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @gannzi-
                 .ra-user-count
-                  552
+                  423
                   .ra-user-contrib
                     Contributions
 
@@ -182,9 +131,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @akebono
                 .ra-user-count
-                  552
+                  333
                   .ra-user-contrib
                     Contributions
 
@@ -197,9 +146,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @coffee2
                 .ra-user-count
-                  552
+                  320
                   .ra-user-contrib
                     Contributions
 
@@ -212,9 +161,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @banana3
                 .ra-user-count
-                  552
+                  309
                   .ra-user-contrib
                     Contributions
 
@@ -227,9 +176,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @sos_man
                 .ra-user-count
-                  552
+                  209
                   .ra-user-contrib
                     Contributions
 
@@ -242,9 +191,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @yarima9
                 .ra-user-count
-                  552
+                  190
                   .ra-user-contrib
                     Contributions
 
@@ -257,9 +206,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @aa-chan
                 .ra-user-count
-                  552
+                  140
                   .ra-user-contrib
                     Contributions
 

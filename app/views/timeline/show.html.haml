@@ -7,7 +7,7 @@
             = image_tag "3-trend_icon.png", class:"trend_icon1" , alt:"トレンド"
           .menu-item1
             .item1-name
-              = link_to("トレンド", trend_path, class: 'articles_font')
+              = link_to("トレンド", trend_path, class: 'articles_font_trend2')
               //=link
         .menu-items2
           //= link_to URL
@@ -15,7 +15,7 @@
             = image_tag "2-menubar-timeline.png",  class:"trend_icon1" , alt: "タイムライン"
           .menu-item2
             .item2-name
-              = link_to("タイムライン", timeline_path, class: 'articles_font')
+              = link_to("タイムライン", timeline_path, class: 'articles_font_timeline2')
 
         .menu-items3
           //= link_to URL
@@ -23,7 +23,7 @@
             = image_tag "1-menu-bar-tag_feed.png", class:"trend_icon1" , alt:"タグフィード"
           .menu-item3
             .item3-name
-              = link_to("タグフィード", tag_feed_path, class: 'articles_font')
+              = link_to("タグフィード", tag_feed_path, class: 'articles_font_tag-feed2')
       .main-view
         .main-item
           .main-header
@@ -32,202 +32,32 @@
               .main-label1
                 .label-article
                   タイムライン
+        - @article.each do |article|
+          .articles
+            .content
+              .item_header
+                .item_header_start
+                  .goods_icon
+                    /= image_tag "goods.2.png",  class:"goods2" , alt: "いいね"
+                    ◆
+                  .item_content_likelist
+                    = image_tag "profile.jpg", class:"timeline_avatar", alt:""
+                    .action_type
+                      = link_to article.user.name, "/#{article.user.name}", class: "author-name"
+                      が　いいね　しました。
+                      .header_action
 
-        .articles
-          .content
-            .item_header
-              .item_header_start
-                .goods_icon
-                  = image_tag "goods.2.png",  class:"goods2" , alt: "いいね"
-                .item_content_likelist
-                  = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", class:"item_content_liker_image",  alt:"プロフ画"
-                  .action_type
-                    が　いいね　しました。
-                    .header_action
+                .item_haeder_end
+                  .time_article
+                    .time
+                      = "#{article.created_at.strftime('%-m月%d日')}"
 
-              .item_haeder_end
-                .time_article
-                  .time
-                    55 minutes ago
-
-            .articles_content
-              .user_iamge
-                = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "20x20",  alt:"プロフ画"
-              .articles_body
-                .articles_title
-                  直近１年のQiita記事分析で分かった７つの「驚愕」
-
-
-        .articles
-          .content
-            .item_header
-              .item_header_start
-                .goods_icon
-                  = image_tag "2-mainview-list.png",  class:"goods2" , alt: "いいね"
-                .item_content_likelist
-                  = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", class:"item_content_liker_image",  alt:"プロフ画"
-                  .action_type
-                    が　投稿　しました。
-                    .header_action
-
-              .item_haeder_end
-                .time_article
-                  .time
-                    50 minutes ago
-
-            .item_content
-              .user_iamge
-                = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "20x20",  alt:"プロフ画"
-              .content_body
-                .content_title
-                  図解！どのサイトを見てもわからなかった人のためのMVC
-
-        .articles
-          .content
-            .item_header
-              .item_header_start
-                .goods_icon
-                  = image_tag "goods.2.png",  class:"goods2" , alt: "いいね"
-                .item_content_likelist
-                  = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", class:"item_content_liker_image",  alt:"プロフ画"
-                  .action_type
-                    が　いいね　しました。
-                    .header_action
-
-              .item_haeder_end
-                .time_article
-                  .time
-                    45 minutes ago
-
-            .item_content
-              .user_iamge
-                = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "20x20",  alt:"プロフ画"
-              .content_body
-                .content_title
-                  Qiita殿堂入り記事ランキングを作った物語
-
-        .articles
-          .content
-            .item_header
-              .item_header_start
-                .goods_icon
-                  = image_tag "2-mainview-list.png",  class:"goods2" , alt: "いいね"
-                .item_content_likelist
-                  = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", class:"item_content_liker_image",  alt:"プロフ画"
-                  .action_type
-                    が　投稿　しました。
-                    .header_action
-
-              .item_haeder_end
-                .time_article
-                  .time
-                    40 minutes ago
-
-            .item_content
-              .user_iamge
-                = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "20x20",  alt:"プロフ画"
-              .content_body
-                .content_title
-                  某RPGっぽいUIをCSSとHTMLだけでつくってみたよ
-
-        .articles
-          .content
-            .item_header
-              .item_header_start
-                .goods_icon
-                  = image_tag "goods.2.png",  class:"goods2" , alt: "いいね"
-                .item_content_likelist
-                  = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", class:"item_content_liker_image",  alt:"プロフ画"
-                  .action_type
-                    が　いいね　しました。
-                    .header_action
-
-              .item_haeder_end
-                .time_article
-                  .time
-                    55 minutes ago
-
-            .item_content
-              .user_iamge
-                = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "20x20",  alt:"プロフ画"
-              .content_body
-                .content_title
-                  直近１年のQiita記事分析で分かった７つの「驚愕」
-
-
-        .articles
-          .content
-            .item_header
-              .item_header_start
-                .goods_icon
-                  = image_tag "goods.2.png",  class:"goods2" , alt: "いいね"
-                .item_content_likelist
-                  = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", class:"item_content_liker_image",  alt:"プロフ画"
-                  .action_type
-                    が　いいね　しました。
-                    .header_action
-
-              .item_haeder_end
-                .time_article
-                  .time
-                    55 minutes ago
-
-            .item_content
-              .user_iamge
-                = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "20x20",  alt:"プロフ画"
-              .content_body
-                .content_title
-                  直近１年のQiita記事分析で分かった７つの「驚愕」
-
-
-        .articles
-          .content
-            .item_header
-              .item_header_start
-                .goods_icon
-                  = image_tag "goods.2.png",  class:"goods2" , alt: "いいね"
-                .item_content_likelist
-                  = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", class:"item_content_liker_image",  alt:"プロフ画"
-                  .action_type
-                    が　いいね　しました。
-                    .header_action
-
-              .item_haeder_end
-                .time_article
-                  .time
-                    55 minutes ago
-
-            .item_content
-              .user_iamge
-                = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "20x20",  alt:"プロフ画"
-              .content_body
-                .content_title
-                  直近１年のQiita記事分析で分かった７つの「驚愕」
-
-
-        .articles
-          .content
-            .item_header
-              .item_header_start
-                .goods_icon
-                  = image_tag "goods.2.png",  class:"goods2" , alt: "いいね"
-                .item_content_likelist
-                  = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", class:"item_content_liker_image",  alt:"プロフ画"
-                  .action_type
-                    が　いいね　しました。
-                    .header_action
-
-              .item_haeder_end
-                .time_article
-                  .time
-                    55 minutes ago
-
-            .item_content
-              .user_iamge
-                = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "20x20",  alt:"プロフ画"
-              .content_body
-                .content_title
-                  直近１年のQiita記事分析で分かった７つの「驚愕」
+              .articles_content
+                .user_iamge
+                  = image_tag "profile.jpg", class:"timeline_avatar", alt:""
+                .articles_body
+                  .articles_title
+                    = link_to article.title, "/articles/#{article.id}", class: "title-text"
 
       .a-side
         .p-home_ad
@@ -252,7 +82,7 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @shotyan
                 .ra-user-count
                   552
                   .ra-user-contrib
@@ -267,9 +97,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @hihiman
                 .ra-user-count
-                  552
+                  530
                   .ra-user-contrib
                     Contributions
 
@@ -282,9 +112,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @nauhodo
                 .ra-user-count
-                  552
+                  514
                   .ra-user-contrib
                     Contributions
 
@@ -297,9 +127,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @gannzi-
                 .ra-user-count
-                  552
+                  423
                   .ra-user-contrib
                     Contributions
 
@@ -312,9 +142,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @akebono
                 .ra-user-count
-                  552
+                  333
                   .ra-user-contrib
                     Contributions
 
@@ -327,9 +157,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @coffee2
                 .ra-user-count
-                  552
+                  320
                   .ra-user-contrib
                     Contributions
 
@@ -342,9 +172,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @banana3
                 .ra-user-count
-                  552
+                  309
                   .ra-user-contrib
                     Contributions
 
@@ -357,9 +187,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @sos_man
                 .ra-user-count
-                  552
+                  209
                   .ra-user-contrib
                     Contributions
 
@@ -372,9 +202,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @yarima9
                 .ra-user-count
-                  552
+                  190
                   .ra-user-contrib
                     Contributions
 
@@ -387,9 +217,9 @@
                 .ra-user-image
                   = image_tag "https://qiita-image-store.s3.amazonaws.com/0/164189/profile-images/1491563384", size: "32x32",  alt:"プロフ画"
                 .user-name
-                  @aaaoi
+                  @aa-chan
                 .ra-user-count
-                  552
+                  140
                   .ra-user-contrib
                     Contributions
 
