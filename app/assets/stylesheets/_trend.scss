@@ -80,8 +80,7 @@
 
       .main-view{
         margin-bottom: 24px;
-        width: 75vh;
-         //max-width: 85vh;
+        min-width: 85vh;
         background-color: #fff;
         margin: auto 0;
         float: left;
@@ -166,7 +165,7 @@
         .a-side{
   width: 300px;
   margin-left: 20px;
-  //padding-right: 110px;
+  padding-right: 110px;
   float: left;
 
   .p-home_ad{

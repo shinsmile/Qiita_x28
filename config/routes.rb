@@ -19,13 +19,6 @@ Rails.application.routes.draw do
     get '/private', to: 'users#private'
     get '/commentpage', to: 'users#commentpage'
   end
-  resources :tags #do
-
-  #resources :users ,only: [:create, :destroy]
-
-  #get "show_articles" => "articles#show_articles"
-  #get "following_tags" => "tag#following_tags"
-  #resouces :articles do
-    #resources :comments, only: [:create]
+  resources :tags
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
