@@ -61,6 +61,11 @@
                 width: 198px;
                 background-image: url(trend_off.png);
                 background-size: 198px 41px;
+                a {
+                  position: absolute;
+                  width: 198px;
+                  height: 41px;
+                }
               }
               .articles_trend:hover {
                 background-image: url(trend_on.png);
@@ -70,6 +75,11 @@
                 width: 198px;
                 background-image: url(timeline_off.png);
                 background-size: 198px 41px;
+                a {
+                  position: absolute;
+                  width: 198px;
+                  height: 41px;
+                }
               }
               .articles_timeline:hover {
                 background-image: url(timeline_on.png);
@@ -79,6 +89,11 @@
                 width: 198px;
                 background-image: url(tag_feed_off.png);
                 background-size: 198px 41px;
+                a {
+                  position: absolute;
+                  width: 198px;
+                  height: 41px;
+                }
               }
               .articles_tag-feed:hover {
                 background-image: url(tag_feed_on.png);
