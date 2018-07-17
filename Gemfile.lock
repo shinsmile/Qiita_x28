@@ -99,7 +99,6 @@ GEM
       charlock_holmes (~> 0.7.6)
       escape_utils (~> 1.2.0)
       mime-types (>= 1.19)
-      rugged (>= 0.25.1)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     greenmat (3.2.2.4)

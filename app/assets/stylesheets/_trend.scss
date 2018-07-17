@@ -128,6 +128,7 @@
                     color: #999;
                     margin: 0 0 5px 0 ;
                     display: flex;
+                    padding-left: 10px;
                   }
                   &__title{
                     display: inline-block;
@@ -135,6 +136,8 @@
                     line-height: 1.4;
                     font-size: 18px;
                     font-weight: 700;
+                    padding-left: 8px;
+
                   }
                   &__tags{
                     li{
@@ -161,9 +164,9 @@
         }
         .a-side{
   width: 300px;
-  margin-left: 16px;
+  margin-left: 20px;
   padding-right: 110px;
-  float: right;
+  float: left;
 
   .p-home_ad{
     height: 250px;
@@ -343,6 +346,33 @@
   width: 17px;
 }
 
-.articles_font{
-  font-color: white;
+.articles_font_trend{
+  color: white;
+  text-decoration: none;
+}
+
+.articles_font_timeline{
+  color: gray;
+  text-decoration: none;
+}
+
+.articles_font_tag-feed{
+  color: gray;
+  text-decoration: none;
+}
+
+.title-text{
+  color: #1b1b1b;
+  text-decoration: none;
+}
+
+.author-name{
+  color: gray;
+  text-decoration: none;
+}
+
+
+.avatar{
+  height: 43px;
+  width: 43px;
 }

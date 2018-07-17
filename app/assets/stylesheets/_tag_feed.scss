@@ -118,6 +118,7 @@
         .articles{
               padding: 15px 0;
               border-bottom: 1px solid #eee;
+              padding-left: 15px;
                 .my_picture{
                   margin-left: 20px;
                   float: left;
@@ -160,9 +161,9 @@
   }
 .a-side{
   width: 300px;
-  margin-left: 16px;
+  margin-left: 20px;
   padding-right: 110px;
-  float: right;
+  float: left;
 
   .p-home_ad{
     height: 250px;
@@ -467,6 +468,28 @@ width: 18px;
   width: 20px;
 }
 
-.articles_font{
-  font-color: white;
+.avatar_tag-feed{
+  height: 20px;
+  width: 20px;
+}
+
+
+.articles_font_trend3{
+color: gray;
+text-decoration: none;
+}
+
+.articles_font_timeline3{
+color: gray;
+text-decoration: none;
+}
+
+.articles_font_tag-feed3{
+color: white;
+text-decoration: none;
+}
+
+.tag-link{
+color: gray;
+text-decoration: none;
 }

@@ -6,7 +6,7 @@
 
   .allWrapper{
     background-color: #f6f6f6;
-    min-height: 200vh;
+    min-height: 250vh;
 
     .container1{
       padding-top: 32px;
@@ -148,6 +148,7 @@
                 align-items: center;
                 flex-wrap: wrap;
                 .item_content_likelist{
+                  padding-left: 8px;
                   display: flex;
                   align-items: center;
                  // box-sizing: inherit;
@@ -271,6 +272,22 @@ height: 18px;
 width: 18px;
 }
 
-.articles_font{
-  font-color: white;
+.timeline_avatar{
+  height: 25px;
+  weight: 25px;
+}
+
+.articles_font_trend2{
+color: gray;
+text-decoration: none;
+}
+
+.articles_font_timeline2{
+color: white;
+text-decoration: none;
+}
+
+.articles_font_tag-feed2{
+color: gray;
+text-decoration: none;
 }

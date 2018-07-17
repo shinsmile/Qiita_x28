@@ -4,7 +4,7 @@ layout "main"
 #
 
 def show
-    @article = Article.all.order("id DESC")
+    @article = Article.all
     #REDIS.zincrby "articles/daily/#{Date.today.to_s}", 1, "#{@article.id}"
 end
 
