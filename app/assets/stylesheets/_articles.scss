@@ -59,7 +59,7 @@
               .articles_trend {
                 height: 41px;
                 width: 198px;
-                background-image: url(images/trend_off.png);
+                background-image: url(trend_off.png);
                 background-size: 198px 41px;
                 a {
                   position: absolute;
@@ -68,12 +68,12 @@
                 }
               }
               .articles_trend:hover {
-                background-image: url(images/trend_on.png);
+                background-image: url(trend_on.png);
               }
               .articles_timeline {
                 height: 41px;
                 width: 198px;
-                background-image: url(images/timeline_off.png);
+                background-image: url(timeline_off.png);
                 background-size: 198px 41px;
                 a {
                   position: absolute;
@@ -82,12 +82,12 @@
                 }
               }
               .articles_timeline:hover {
-                background-image: url(images/timeline_on.png);
+                background-image: url(timeline_on.png);
               }
               .articles_tag-feed {
                 height: 41px;
                 width: 198px;
-                background-image: url(images/tag_feed_off.png);
+                background-image: url(tag_feed_off.png);
                 background-size: 198px 41px;
                 a {
                   position: absolute;
@@ -96,18 +96,18 @@
                 }
               }
               .articles_tag-feed:hover {
-                background-image: url(images/tag_feed_on.png);
+                background-image: url(tag_feed_on.png);
               }
             }
           }
           .home:hover {
-            background-image: url(images/home_on.png);
+            background-image: url(https://s3-ap-northeast-1.amazonaws.com/miyajimatest/uploads/images/home_on.png);
           }
 
           .community {
             height: 20px;
             width: 95px;
-            background-image: url(images/community_off.png);
+            background-image: url(community_off.png);
             background-size: 95px 20px;
             margin-top: 4px;
             margin-right: 24px;
@@ -133,67 +133,67 @@
               .user_list {
                 height: 41px;
                 width: 198px;
-                background-image: url(images/user_list_off.png);
+                background-image: url(user_list_off.png);
                 background-size: 198px 41px;
               }
               .user_list:hover {
-                background-image: url(images/user_list_on.png);
+                background-image: url(user_list_on.png);
               }
               .organizations {
                 height: 41px;
                 width: 198px;
-                background-image: url(images/organizations_off.png);
+                background-image: url(organizations_off.png);
                 background-size: 198px 41px;
               }
               .organizations:hover {
-                background-image: url(images/organizations_on.png);
+                background-image: url(organizations_on.png);
               }
               .calendar {
                 height: 41px;
                 width: 198px;
-                background-image: url(images/calendar_off.png);
+                background-image: url(calendar_off.png);
                 background-size: 198px 41px;
               }
               .calendar:hover {
-                background-image: url(images/calendar_on.png);
+                background-image: url(calendar_on.png);
               }
               .hr {
                 height: 9px;
                 width: 198px;
-                background-image: url(images/hr.png);
+                background-image: url(hr.png);
                 background-size: 198px 9px;
               }
               .qiitadon {
                 height: 41px;
                 width: 198px;
-                background-image: url(images/qiitadon_off.png);
+                background-image: url(qiitadon_off.png);
                 background-size: 198px 41px;
               }
               .qiitadon:hover {
-                background-image: url(images/qiitadon_on.png);
+                background-image: url(qiitadon_on.png);
               }
               .community_guide {
                 height: 41px;
                 width: 198px;
-                background-image: url(images/community_guide_off.png);
+                background-image: url(community_guide_off.png);
                 background-size: 198px 41px;
               }
               .community_guide:hover {
-                background-image: url(images/community_guide_on.png);
+                background-image: url(community_guide_on.png);
               }
               .manual {
                 height: 41px;
                 width: 198px;
-                background-image: url(images/manual_off.png);
+                background-image: url(manual_off.png);
                 background-size: 198px 41px;
               }
               .manual:hover {
-                background-image: url(images/manual_on.png);
+                background-image: url(manual_on.png);
               }
             }
           }
           .community:hover {
-            background-image: url(images/community_on.png);
+            background-image: url(community_on.png);
           }
 
           .search{
@@ -222,7 +222,7 @@
               float: left;
               height: 24px;
               width: 25px;
-              background-image: url(images/search_icon.png);
+              background-image: url(search_icon.png);
               background-size: 25px 24px;
               margin: 4px 0 4px 0px;
               border: 0;
@@ -239,23 +239,23 @@
           .stock{
             height: 20px;
             width: 105px;
-            background-image: url(images/stock_off.png);
+            background-image: url(stock_off.png);
             background-size: 105px 20px;
             margin-top: 4px;
             margin-right: 16px;
           }
           .stock:hover {
-            background-image: url(images/stock_on.png);
+            background-image: url(stock_on.png);
           }
           .postbutton{
             height: 32px;
             width: 98px;
-            background-image: url(images/postbutton_off.png);
+            background-image: url(postbutton_off.png);
             background-size: 98px 32px;
             margin-right: 20px;
           }
           .postbutton:hover {
-            background-image: url(images/postbutton_on.png);
+            background-image: url(postbutton_on.png);
           }
           // .notification
           .login-user{
@@ -272,13 +272,13 @@
               float: right;
               height: 16px;
               width: 18px;
-              background-image: url(images/arrow_off.png);
+              background-image: url(arrow_off.png);
               background-size: 18px 16px;
               margin-top: 9px;
               margin-left: 2px;
             }
             .user_arrow:hover {
-              background-image: url(images/arrow_on.png);
+              background-image: url(arrow_on.png);
             }
             .profile_picture {
               float: right;
@@ -302,7 +302,7 @@
               .mypage {
                 height: 41px;
                 width: 198px;
-                background-image: url(images/mypage_off.png);
+                background-image: url(mypage_off.png);
                 background-size: 198px 41px;
                 background-size: 198px 41px;
                 a {
@@ -312,55 +312,55 @@
                 }
               }
               .mypage:hover {
-                background-image: url(images/mypage_on.png);
+                background-image: url(mypage_on.png);
               }
               .draft {
                 height: 41px;
                 width: 198px;
-                background-image: url(images/draft_off.png);
+                background-image: url(draft_off.png);
                 background-size: 198px 41px;
               }
               .draft:hover {
-                background-image: url(images/draft_on.png);
+                background-image: url(draft_on.png);
               }
               .request {
                 height: 41px;
                 width: 198px;
-                background-image: url(images/request_off.png);
+                background-image: url(request_off.png);
                 background-size: 198px 41px;
               }
               .request:hover {
-                background-image: url(images/request_on.png);
+                background-image: url(request_on.png);
               }
               .hr {
                 height: 9px;
                 width: 198px;
-                background-image: url(images/hr.png);
+                background-image: url(hr.png);
                 background-size: 198px 9px;
               }
               .setting {
                 height: 41px;
                 width: 198px;
-                background-image: url(images/setting_off.png);
+                background-image: url(setting_off.png);
                 background-size: 198px 41px;
               }
               .setting:hover {
-                background-image: url(images/setting_on.png);
+                background-image: url(setting_on.png);
               }
               .help {
                 height: 41px;
                 width: 198px;
-                background-image: url(images/help_off.png);
+                background-image: url(help_off.png);
                 background-size: 198px 41px;
               }
               .help:hover {
-                background-image: url(images/help_on.png);
+                background-image: url(help_on.png);
               }
               .logout {
                 position: relative;
                 height: 41px;
                 width: 198px;
-                background-image: url(images/logout_off.png);
+                background-image: url(logout_off.png);
                 background-size: 198px 41px;
                 a {
                   position: absolute;
@@ -369,29 +369,29 @@
                 }
               }
               .logout:hover {
-                background-image: url(images/logout_on.png);
+                background-image: url(logout_on.png);
               }
             }
           }
           .signup_button {
             height: 32px;
             width: 96px;
-            background-image: url(images/signup_off.png);
+            background-image: url(signup_off.png);
             background-size: 96px 32px;
             margin-right: 20px;
           }
           .signup_button:hover {
-            background-image: url(images/signup_on.png);
+            background-image: url(signup_on.png);
           }
           .login_button {
             height: 32px;
             width: 56px;
-            background-image: url(images/login_off.png);
+            background-image: url(login_off.png);
             background-size: 56px 32px;
             margin-right: 20px;
           }
           .login_button:hover {
-            background-image: url(images/login_on.png);
+            background-image: url(login_on.png);
           }
         }
     }
