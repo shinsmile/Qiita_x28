@@ -14,8 +14,8 @@
           Qiitaが許可なくTwitterに投稿することはありません。
 
         .sign-up
-          Qiita のアカウントを持っていない場合は
-          = link_to "新規登録", new_registration_path(resource_name), class:"register"
+          もしQiitaのアカウントを持っている場合は
+          = link_to "ログイン", new_user_session_path, class:"register"
           から。
     .right-content
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
