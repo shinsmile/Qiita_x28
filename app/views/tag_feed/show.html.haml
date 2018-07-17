@@ -42,11 +42,15 @@
                     %li.tag
                       ●
                       = link_to tag.name, "/tags/#{tag.name}", class: "tag-link"
+              .time_article
+                .time
+                  = "#{article.created_at.strftime('%-m月%d日')}"
               .article__title
                 = link_to article.title, "/articles/#{article.id}", class: "title-text"
               .article__data
                 = image_tag "profile.jpg", class:"avatar_tag-feed", alt:""
                 = link_to article.user.name, "/#{article.user.name}", class: "author-name"
+
 
       .a-side
         .p-home_ad
