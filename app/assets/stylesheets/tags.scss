@@ -19,7 +19,7 @@
         width: 30px;
         margin-top: 4px;
         margin-right: 12px;
-        background-image: url(python.png);
+        background-image: url("https://s3-ap-northeast-1.amazonaws.com/miyajimatest/uploads/images/icon.png");
         background-size: 30px 30px;
       }
       .tag-name {
@@ -333,11 +333,11 @@
 .follow {
   .btn {
     .unfollow:hover {
-      image: url(follow_tag_on.png);
+      image: url("https://s3-ap-northeast-1.amazonaws.com/miyajimatest/uploads/images/unfollow_tag_on.png");
     }
 
     .follow:hover {
-      image: url(follow_tag_on.png);
+      image: url("https://s3-ap-northeast-1.amazonaws.com/miyajimatest/uploads/images/follow_tag_on.png");
     }
   }
 }
