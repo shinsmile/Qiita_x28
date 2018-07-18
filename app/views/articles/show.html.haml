@@ -1,4 +1,17 @@
 %link{:href => "https://use.fontawesome.com/releases/v5.0.6/css/all.css", :rel => "stylesheet"}/
+%meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+%meta{:charset => "UTF-8"}/
+%meta{:content => "width=device-width, user-scalable=no", :name => "viewport"}/
+%meta{:content => "yes", :name => "apple-mobile-web-app-capable"}/
+%title ${title}
+%meta{:content => "${description}", :name => "description"}/
+:css
+  ${style}
+%script{:src => "http://cdn.rawgit.com/phi-jp/high/0.0.3/high.js"}
+%script{:src => "http://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"}
+:javascript
+  ${script}
+%script{:src => "../../assets/javascripts/markdown.js", :type => "text/javascript"}
 #main
   .wapper
     #container{style: "display: grid;"}
@@ -26,11 +39,11 @@
                 %i.fab.fa-ellipsis-h.fa#icon
             %h1.title
               = @article.title
-            #Tags
-              %a.tags_item
-                tags
-          .content
-            = qiita_markdown(simple_format(@article.body))
+          .editor
+            %textarea.ta= @article.body
+          #hello preview
+
+          / = qiita_markdown(simple_format(@article.body))
           .show_footer
             .show_footer_menu
               %span.fa-stack#plane
