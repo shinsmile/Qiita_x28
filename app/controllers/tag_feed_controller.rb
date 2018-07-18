@@ -3,8 +3,6 @@ layout "main"
 before_action :move_to_session, except: :index
 
   def show
-    @tag = params[:id]
-    @tags = ActsAsTaggableOn::Tag.all
     @articles = Article.all.order(" updated_at DESC ").limit(20)
   end
 
