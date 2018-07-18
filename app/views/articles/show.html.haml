@@ -32,9 +32,9 @@
                 %a.profile
                   = image_tag "profile.jpg", class: "profile_picture", size: "32x32"
                 %h1.author_name
-                  / = link_to article.user.name, "mypage_link"
+                  = link_to @article.user.name
               .show_header_info__time
-                form_posted_time(article.created_at)
+                = form_posted_time(@article.created_at)
               .show_header_info__meta
                 %i.fab.fa-ellipsis-h.fa#icon
             %h1.title
