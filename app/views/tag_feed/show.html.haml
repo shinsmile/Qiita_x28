@@ -31,7 +31,8 @@
               .main-label1
                 .label-article
                   タグフィード
-        - @article.each do |article|
+
+        - @articles.each do |article|
           .articles
             .picture
               /= image_tag "python_tag.png", class:"python_tags", alt:""
@@ -42,6 +43,9 @@
                     %li.tag
                       ●
                       = link_to tag.name, "/tags/#{tag.name}", class: "tag-link"
+              .time_article
+                .time
+                  = "#{article.created_at.strftime('%-m月%d日')}"
               .article__title
                 = link_to article.title, "/articles/#{article.id}", class: "title-text"
               .article__data
