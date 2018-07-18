@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
   #resources :users ,only: [:create, :destroy]
 
+
   #get "show_articles" => "articles#show_articles"
   #get "following_tags" => "tag#following_tags"
   #resouces :articles do

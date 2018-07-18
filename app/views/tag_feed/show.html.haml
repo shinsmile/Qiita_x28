@@ -31,7 +31,8 @@
               .main-label1
                 .label-article
                   タグフィード
-        - @article.each do |article|
+
+        - @articles.each do |article|
           .articles
             .picture
               /= image_tag "python_tag.png", class:"python_tags", alt:""
