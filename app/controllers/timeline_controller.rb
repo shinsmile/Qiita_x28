@@ -19,7 +19,7 @@ end
   #end
 
   def show
-    @article = Article.all.order("id DESC")
+    @article = Article.all.order("id DESC").limit(20)
     #@article = Article.find(params[:id])
     #REDIS.zincrby "articles/daily/#{Date.today.to_s}", 1, @article.id
   end
