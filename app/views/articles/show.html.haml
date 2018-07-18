@@ -45,7 +45,10 @@
             .show_header_info
               .show_header_info__author
                 %a.profile
-                  = image_tag "profile.jpg", class: "profile_picture", size: "32x32"
+                - if @article.user.image.blank?
+                  = image_tag "no-image.png", class: "profile_picture", size: "32x32"
+                - else
+                  = image_tag "#{@article.user.image}", class: "profile_picture", size: "32x32"
                 %h1.author_name
                   / = link_to article.user.name, "mypage_link"
               .show_header_info__time
