@@ -95,7 +95,10 @@
                   Like
           .show_footer_author_info
             %a.profile
-              = image_tag "profile.jpg", class: "profile_picture", size: "60x60"
+              - if @article.user.image.blank?
+                = image_tag "no-image.png", class: "profile_picture", size: "60x60"
+              - else
+                = image_tag "#{@article.user.image}", class: "profile_picture", size: "60x60"
             .author_info_body
               .author_info_header
                 %h1.author_name

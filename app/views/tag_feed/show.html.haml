@@ -39,27 +39,33 @@
               - if tag == user_tag
                 - article_ids << article.id
                 - newarray = article_ids.uniq
-        - for num in newarray
-          - for article in @articles
-            - if num == article.id
-              .articles
-                .picture
-                  /= image_tag "python_tag.png", class:"python_tags", alt:""
-                .article
-                  .article__tags
-                    %ul
-                      - article.tags.each do |tag|
-                        %li.tag
-                          ●
-                          = link_to tag.name, "/tags/#{tag.name}", class: "tag-link"
-                  .time_article
-                    .time
-                      = "#{article.created_at.strftime('%-m月%d日')}"
-                  .article__title
-                    = link_to article.title, "/articles/#{article.id}", class: "title-text"
-                  .article__data
-                    = image_tag "profile.jpg", class:"avatar_tag-feed", alt:""
-                    = link_to article.user.name, "/#{article.user.name}", class: "author-name"
+        - if newarray.blank?
+        - else
+          - for num in newarray
+            - for article in @articles
+              - if num == article.id
+                .articles
+                  .picture
+                    /= image_tag "python_tag.png", class:"python_tags", alt:""
+                  .article
+                    .article__tags
+                      %ul
+                        - article.tags.each do |tag|
+                          %li.tag
+                            ●
+                            = link_to tag.name, "/tags/#{tag.name}", class: "tag-link"
+                    .time_article
+                      .time
+                        = "#{article.created_at.strftime('%-m月%d日')}"
+                    .article__title
+                      = link_to article.title, "/articles/#{article.id}", class: "title-text"
+                    .article__data
+                      - if article.user.image.blank?
+                        = image_tag "no-image.png", class: "avatar_tag-feed", alt:""
+                        = link_to article.user.name, "/#{article.user.name}", class: "author-name"
+                      - else
+                        = image_tag "#{article.user.image}", class: "avatar_tag-feed", alt:"プロフ画"
+                        = link_to article.user.name, "/#{article.user.name}", class: "author-name"
 
       .a-side
         .p-home_ad
