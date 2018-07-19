@@ -27,7 +27,7 @@
               = "#{stock.article.created_at.strftime('%-m月%d日')}"
               に投稿
           .title
-            = link_to stock.article.title, "/articles/#{stock.article.id}", class: "title-text"
+            = link_to stock.article.title, "/articles/#{stock.article.id}", :target=>["_blank"], class: "title-text"
           .stock-and-tags
             %span{id: "stock-of-#{stock.id}"}
               = render partial: 'stock', locals: { stock: stock }

@@ -58,7 +58,7 @@
                       .time
                         = "#{article.created_at.strftime('%-m月%d日')}"
                     .article__title
-                      = link_to article.title, "/articles/#{article.id}", class: "title-text"
+                      = link_to article.title, "/articles/#{article.id}", :target=>["_blank"], class: "title-text"
                     .article__data
                       - if article.user.image.blank?
                         = image_tag "no-image.png", class: "avatar_tag-feed", alt:""

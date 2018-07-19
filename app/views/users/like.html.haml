@@ -78,7 +78,7 @@
                       = "#{article.created_at.strftime('%-m月%d日')}"
                       に投稿
                   .article__title
-                    = link_to article.title, "/articles/#{article.id}", class: "title-text", class: "no_line_color_blue"
+                    = link_to article.title, "/articles/#{article.id}", :target=>["_blank"], class: "title-text", class: "no_line_color_blue"
                   .article__tags
                     %ul
                     - article.tags.each do |tag|

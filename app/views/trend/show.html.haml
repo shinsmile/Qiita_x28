@@ -47,7 +47,7 @@
                 = image_tag "#{article.user.image}", class: "avatar"
             .article
               .article__title
-                = link_to article.title, "/articles/#{article.id}", class: "title-text"
+                = link_to article.title, "/articles/#{article.id}", :target=>["_blank"], class: "title-text"
               .article__data
                 %span.author-name
                 by

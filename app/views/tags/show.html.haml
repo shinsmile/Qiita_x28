@@ -68,7 +68,7 @@
                     = "#{article.created_at.strftime('%-m月%d日')}"
                     に投稿
                 .content-title
-                  = link_to article.title, "/articles/#{article.id}", class: "title-text"
+                  = link_to article.title, "/articles/#{article.id}", :target=>["_blank"], class: "title-text"
                 .stock-and-tags
                   %span{id: "stock-of-#{article.id}"}
                     = render partial: 'stock', locals: { article: article }
@@ -99,7 +99,7 @@
                     = "#{article.created_at.strftime('%-m月%d日')}"
                     に投稿
                 .content-title
-                  = link_to article.title, "/articles/#{article.id}", class: "title-text"
+                  = link_to article.title, "/articles/#{article.id}", :target=>["_blank"], class: "title-text"
                 .stock-and-tags
                   %span{id: "stock-of-#{article.id}"}
                     = render partial: 'stock', locals: { article: article }
